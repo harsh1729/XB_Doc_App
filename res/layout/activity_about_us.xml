@@ -1,0 +1,40 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="" >
+
+    <!-- Header aligned to top -->
+
+    <include layout="@layout/app_header" />
+    <!-- Scrollable Content below header and above footer -->
+
+    <ScrollView
+        android:id="@+id/scrollableContents"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="15dp"
+        android:layout_weight="7.8"
+        android:background="@drawable/card_background_selector" >
+
+        <LinearLayout
+            android:id="@+id/llytMainBodyAboutApp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="5dp" >
+
+            
+
+            <ImageView
+                android:id="@+id/imgViewCompany"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/xb" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,49 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:isScrollContainer="false"
+     tools:context="${relativePackage}.${activityClass}" >
+
+    <include layout="@layout/app_header" />
+
+    <!-- <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="3dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="3dp"
+        android:layout_weight="1.0"
+        android:background="@drawable/card_background_selector" >
+
+        <EditText
+            android:id="@+id/edtCitySearch"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:ems="10"
+            android:textColor="@color/Black"
+            android:hint="Search your Prefered City" >
+
+            <requestFocus />
+        </EditText>
+    </LinearLayout> -->
+
+    <ListView
+        android:id="@+id/listViewCity"
+        android:background="@drawable/popup_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="20dp"
+        android:layout_weight="8.0" 
+       >
+    </ListView>
+    
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="20dp"
+        android:layout_weight="1.0" ></LinearLayout>
+
+</LinearLayout>

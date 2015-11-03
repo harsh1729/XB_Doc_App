@@ -1,0 +1,34 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:isScrollContainer="false"
+    tools:context="${relativePackage}.${activityClass}" >
+    
+     <!-- Header aligned to top -->
+
+    <include layout="@layout/app_header" />
+    
+    <ListView
+        android:id="@+id/listView"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="8.2"
+        android:listSelector="@android:color/transparent"
+		android:cacheColorHint="@android:color/transparent"
+		android:divider="@null"
+		android:dividerHeight="7dp"
+        >
+       <!--  style="@style/ListView" --> 
+    </ListView>
+
+    <!-- <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="9.0"
+        android:text="TextView" /> -->
+
+</LinearLayout>
