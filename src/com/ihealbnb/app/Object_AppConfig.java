@@ -35,6 +35,8 @@ public class Object_AppConfig {
 		}
 
 	}
+	
+	
 	public int getCityId() {
 		int cityId = -1;
 		
@@ -47,6 +49,23 @@ public class Object_AppConfig {
 		
 		if (editor != null) {
 			editor.putInt("appConfig_cityId", cityId);
+			editor.commit();
+		}
+
+	}
+	
+	public int getUserId() {
+		int UserId = -1;
+		
+		if(prefs != null)
+			UserId = prefs.getInt("appConfig_UserId",-1);	
+		
+		return UserId;
+	}
+	public void setUserId(int UserId) {
+		
+		if (editor != null) {
+			editor.putInt("appConfig_UserId", UserId);
 			editor.commit();
 		}
 
@@ -98,6 +117,59 @@ public class Object_AppConfig {
 		
 		if (editor != null) {
 			editor.putString("appConfig_CateName", CateName);
+			editor.commit();
+		}
+
+	}
+
+	public boolean getbool() {
+		//false_mean = goes from cate list;
+		//true_mean = goes from doctor list ;
+		boolean value = false;
+		
+		if(prefs != null)
+			value = prefs.getBoolean("appConfig_value",false);	
+		
+		return value;
+	}
+	public void setbool(boolean value) {
+		
+		if (editor != null) {
+			editor.putBoolean("appConfig_value", value);
+			editor.commit();
+		}
+
+	}
+	
+	public String getuserName() {
+		String userName = "" ;
+
+		if(prefs != null)
+			userName = prefs.getString("appConfig_userName", "");
+
+		return userName;
+	}
+	public void setuserName(String userName) {
+
+		if (editor != null) {
+			editor.putString("appConfig_userName", userName);
+			editor.commit();
+		}
+
+	}
+	
+	public int getMaxLimit() {
+		int MaxLimit = 15;
+		
+		if(prefs != null)
+			MaxLimit = prefs.getInt("appConfig_MaxLimit",MaxLimit);	
+		
+		return MaxLimit;
+	}
+	public void setMaxLimit(int MaxLimit) {
+		
+		if (editor != null) {
+			editor.putInt("appConfig_MaxLimit", MaxLimit);
 			editor.commit();
 		}
 

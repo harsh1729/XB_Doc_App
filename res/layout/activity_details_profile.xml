@@ -7,7 +7,6 @@
 
     <include layout="@layout/app_header" />
 
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -44,18 +43,26 @@
                     android:id="@+id/txtDoctorQuali"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="5dp"
+                    android:layout_marginBottom="3dp"
                     android:text=""
                     android:textSize="@dimen/txt_app_labels_normal" />
+                <TextView
+                    android:id="@+id/txtDoctorRegistraion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="3dp"
+                    android:text=""
+                    android:textSize="@dimen/txt_app_labels_normal" />
+                
             </LinearLayout>
 
             <ImageView
                 android:id="@+id/imgDoctor"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/default_user"
+                android:layout_marginBottom="10dp"
                 android:scaleType="centerCrop"
-                android:layout_marginBottom="10dp" />
+                android:src="@drawable/default_user" />
         </LinearLayout>
 
         <ScrollView
@@ -64,12 +71,13 @@
             android:layout_height="0dp"
             android:layout_weight="8.2"
             android:background="@drawable/selector_row_item_listview"
-            android:padding="10dp" >
+             >
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical" >
+                android:orientation="vertical" 
+                android:padding="10dp">
 
                 <LinearLayout
                     android:id="@+id/linearAddresHS"
@@ -175,6 +183,41 @@
                     android:src="@drawable/xbmap" />
                     -->
 
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0.8dp"
+                        android:layout_marginBottom="6dp"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginRight="4dp"
+                        android:layout_marginTop="6dp"
+                        android:background="@color/App_Header" >
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearMaps"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone" >
+
+                    <TextView
+                        android:id="@+id/textViewMAp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="6dp"
+                        android:text="Get Direction"
+                        android:textColor="@color/App_Header"
+                        android:textSize="@dimen/txt_app_labels_normal_large" />
+
+                    <fragment
+                        android:id="@+id/map"
+                        android:name="com.google.android.gms.maps.MapFragment"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:layout_marginTop="5dp"
+                         />
+                       
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="0.8dp"
@@ -361,6 +404,46 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/linearNearestMedical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone" >
+
+                    <TextView
+                        android:id="@+id/textNearestMedical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="6dp"
+                        android:text="Nearest Medical Store"
+                        android:textColor="@color/App_Header"
+                        android:textSize="@dimen/txt_app_labels_normal_large" />
+
+                    <TextView
+                        android:id="@+id/txtNearestMedical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:layout_marginBottom="5dp"
+                        android:textSize="@dimen/txt_app_labels_normal" />
+                    <TextView
+                        android:id="@+id/txtNearestMedicalContact"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textSize="@dimen/txt_app_labels_normal" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0.8dp"
+                        android:layout_marginBottom="6dp"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginRight="4dp"
+                        android:layout_marginTop="6dp"
+                        android:background="@color/App_Header" >
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
                     android:id="@+id/linearhsImage"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -375,20 +458,28 @@
                         android:text="Hospital Images"
                         android:textColor="@color/App_Header"
                         android:textSize="@dimen/txt_app_labels_normal_large" />
+                   <HorizontalScrollView
+                            android:id="@+id/horizontalScrollView1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" 
+                            android:fadeScrollbars="false">
 
                     <LinearLayout
                         android:id="@+id/linearHospitalImage"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingLeft="8dp"
-                        android:paddingRight="8dp"
-                        android:orientation="horizontal" >
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:padding ="8dp"
+                       >
                         
                         
                         
                     </LinearLayout>
+                </HorizontalScrollView>
+                    
                 </LinearLayout>
-            </LinearLayout>
+             </LinearLayout>
+
         </ScrollView>
     </LinearLayout>
 

@@ -5,8 +5,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-
-
 import android.app.Activity;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -16,12 +14,12 @@ import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
-import android.util.Log;
 import android.view.Gravity;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup.LayoutParams;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.EditText;
@@ -37,12 +35,13 @@ public class Activity_Home extends Activity {
 	private ListView listViewOptions;
 	private ArrayList<String> listOptions;
 	EditText edt;
-	static Context con;
+	//static Context con;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_home);
-		con = this;
+		
 		//getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_VISIBLE|WindowManager.LayoutParams.SOFT_INPUT_ADJUST_RESIZE);
 		DBHandler_DoctorCategory DbhCate = new DBHandler_DoctorCategory(this);
 		final ArrayList<Object_DoctorCategory>listDoctorCate = DbhCate.getAllCategory();
@@ -56,6 +55,8 @@ public class Activity_Home extends Activity {
 		Custom_ConnectionDetector connection = new Custom_ConnectionDetector(this);
 		if(!connection.isConnectingToInternet()){
 			Globals.showAlert("Error", Globals.INTERNET_ERROR, this);
+		}else{
+			 Custom_AppRater.app_launched(this);
 		}
 		
 		/*TextView secondTextView = (TextView)findViewById(R.id.textView5);
@@ -70,7 +71,7 @@ public class Activity_Home extends Activity {
 		final ImageView imgOption = (ImageView) findViewById(R.id.imgOption);
 		ImageView imgCancel = (ImageView) findViewById(R.id.imgCancel);
 		edt = (EditText) findViewById(R.id.edtSearch);
-		imgOption.setVisibility(View.GONE);
+		//imgOption.setVisibility(View.GONE);
 		imgCityChange.setVisibility(View.GONE);
 		TextView txt = (TextView)findViewById(R.id.txtHeadershot);
 		txt.setVisibility(View.GONE);
@@ -80,12 +81,19 @@ public class Activity_Home extends Activity {
 			@Override
 			public void onClick(View arg0) {
 				// TODO Auto-generated method stub
+				/*getWindow().setSoftInputMode(
+					    WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_VISIBLE);*/
+				//showKeyboard();
+				edt.requestFocus();
+				InputMethodManager keyboard = (InputMethodManager)
+		                getSystemService(Context.INPUT_METHOD_SERVICE);
+		                keyboard.showSoftInput(edt, 0);
 				
 				LinearLayout linear = (LinearLayout) findViewById(R.id.linearSearch);
 				linear.setVisibility(View.VISIBLE);
 				imgSearch.setVisibility(View.GONE);
 				linearHeader.setVisibility(View.GONE);
-				//imgOption.setVisibility(View.GONE);
+				imgOption.setVisibility(View.GONE);
 			}
 		});
 		
@@ -94,28 +102,26 @@ public class Activity_Home extends Activity {
 			@Override
 			public void onClick(View arg0) {
 				// TODO Auto-generated method stub
-				
-				LinearLayout linear = (LinearLayout) findViewById(R.id.linearSearch);
+				/*getWindow().setSoftInputMode(
+					    WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);*/
 				edt.setText("");
-				cateView(listDoctorCate);
-				linear.setVisibility(View.GONE);
-				imgSearch.setVisibility(View.VISIBLE);
-				linearHeader.setVisibility(View.VISIBLE);
-				//imgOption.setVisibility(View.VISIBLE);
+				//cateView(listDoctorCate);
+				hideSearchbar();
+				
 			}
 		});
 		
 		
 	
 		//this is code for Setting like share ,About us
-		/*imgOption.setOnClickListener(new  OnClickListener() {
+		imgOption.setOnClickListener(new  OnClickListener() {
 			
 			@Override
 			public void onClick(View v) {
 				
 				onClickOptionsHome(v);
 			}
-		});*/
+		});
 		/*ImageButton imgButtonOptions = (ImageButton)(findViewById(R.id.imgHeaderBtnRight));
 		imgButtonOptions.setOnClickListener(new OnClickListener() {
 
@@ -154,6 +160,21 @@ public class Activity_Home extends Activity {
 		}
 	}); 
 	}
+	
+	
+	private void hideSearchbar(){
+		ImageView imgOption = (ImageView) findViewById(R.id.imgOption);
+		 LinearLayout linearHeader = (LinearLayout) findViewById(R.id.linearHeader);
+		 ImageView imgSearch = (ImageView) findViewById(R.id.imgSearch);
+		hideKeyboard();
+		LinearLayout linear = (LinearLayout) findViewById(R.id.linearSearch);
+		
+		linear.setVisibility(View.GONE);
+		imgSearch.setVisibility(View.VISIBLE);
+		linearHeader.setVisibility(View.VISIBLE);
+		imgOption.setVisibility(View.VISIBLE);
+	}
+	
 	
 	public void onClickOptionsHome(View v) {
 		
@@ -198,7 +219,7 @@ public class Activity_Home extends Activity {
 		// listViewOptions.setPadding(2, 2, 2, 2);
 		// listViewOptions.setVisibility(View.GONE);
 
-		String[] values = new String[] { Globals.OPTION_SHARE, Globals.OPTION_CHANGE_LOCATION, Globals.OPTION_ABOUT_US};
+		String[] values = new String[] { Globals.OPTION_SHARE, Globals.OPTION_CHANGE_LOCATION, Globals.OPTION_ABOUT_US,Globals.OPTION_RATE_US,Globals.OPTION_REGISTER_DOCTOR};
 
 		
 
@@ -226,7 +247,7 @@ public class Activity_Home extends Activity {
 			data.add(map);
 		}
 		
-		SimpleAdapter adaptor = new SimpleAdapter(this, data, R.layout.list_row_city, new String[]{"Name"}, new int[]{R.id.txtCityName});
+		SimpleAdapter adaptor = new SimpleAdapter(this, data, R.layout.row_settings_options, new String[]{"Name"}, new int[]{R.id.txtCityName});
 		listViewOptions.setAdapter(adaptor);
 
 		// RelativeLayout root =
@@ -295,9 +316,6 @@ public class Activity_Home extends Activity {
 		LinearLayout scRoll = (LinearLayout)findViewById(R.id.scRollLinear);
 		//ScrollView.LayoutParams params=(ScrollView.LayoutParams) scRoll.getLayoutParams();
 		//params.setMargins(DEFAULT_MARGIN,DEFAULT_MARGIN,DEFAULT_MARGIN,DEFAULT_MARGIN);
-		
-		
-		
 		if(((LinearLayout) scRoll).getChildCount() > 0) 
 		    ((LinearLayout) scRoll).removeAllViews(); 
 		for(int i=0;i<listDoctorCate.size();i++){
@@ -349,6 +367,8 @@ public class Activity_Home extends Activity {
 	                	Intent i = new Intent(Activity_Home.this,Activity_category.class);
 			            //i.putExtra("doctorCat", obj.Name);
 		                 /*i.putExtra("idCat", obj.id);*/
+	                	edt.setText("");
+	                	hideSearchbar();
 			            startActivity(i);
 	            		// Activity_Home.this.finish();
 	            		}
@@ -393,6 +413,8 @@ public class Activity_Home extends Activity {
 		                	Intent i = new Intent(Activity_Home.this,Activity_category.class);
 				           // i.putExtra("doctorCat", obj1.Name);
 				           // i.putExtra("idCat", obj1.id);
+		                	edt.setText("");
+		                	hideSearchbar();
 				            startActivity(i);
 	            		//Activity_Home.this.finish();
 	            		}							
@@ -443,10 +465,23 @@ public class Activity_Home extends Activity {
 					nextClass = Activity_aboutUs.class;
 				}else if(name.equals(Globals.OPTION_CHANGE_LOCATION)){
 					nextClass = Activity_chooseCity.class;
-					this.finish();
+					Object_AppConfig obj = new Object_AppConfig(this);
+					obj.setbool(false);
+					/*this.finish();*/
+				}else if(name.equals(Globals.OPTION_REGISTER_DOCTOR)){
+					//nextClass = Activity_Share.class;
+					   registerClick();
+				}else if(name.equals(Globals.OPTION_SHARE)){
+					//nextClass = Activity_Share.class;
+					   shareClick();
 				}
-				else if(name.equals(Globals.OPTION_SHARE)){
-					nextClass = Activity_Share.class;
+				else if(name.equals(Globals.OPTION_RATE_US)){
+					
+			Custom_ConnectionDetector cd = new Custom_ConnectionDetector(this);
+					if(cd.isConnectingToInternet()){
+						 Custom_AppRater.rateIt(this);
+
+					}
 				}
 				if (nextClass != null) {
 					Intent intent = new Intent(this, nextClass);
@@ -456,4 +491,46 @@ public class Activity_Home extends Activity {
 		}
 		
 	}
+	
+	private void hideKeyboard() {   
+	    // Check if no view has focus:
+	     if (edt != null) {
+	        InputMethodManager inputManager = (InputMethodManager) this.getSystemService(Context.INPUT_METHOD_SERVICE);
+	        inputManager.hideSoftInputFromWindow(edt.getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
+	    }
+	
+	}
+	
+	/*private void showKeyboard() {   
+	    // Check if no view has focus:
+	     if (edt != null) {
+	        InputMethodManager inputManager = (InputMethodManager) this.getSystemService(Context.INPUT_METHOD_SERVICE);
+	        inputManager.hideSoftInputFromWindow(edt.getWindowToken(), InputMethodManager.SHOW_FORCED);
+	    }
+	
+	}*/
+	
+	private void registerClick(){
+		Intent i = new Intent(this,Activity_LoginDoctor.class);
+		startActivity(i);
+		this.finish();
+	}
+	
+	
+	@Override
+	protected void onResume() {
+		// TODO Auto-generated method stub
+		super.onResume();
+	}
+	
+    public void shareClick(){
+		
+		Intent sendIntent = new Intent();
+		sendIntent.setAction(Intent.ACTION_SEND);
+		sendIntent.putExtra(Intent.EXTRA_TEXT, Globals.SHARE_APP_MSG+ "\n "+Globals.SHARE_LINK_GENERIC);
+		//sendIntent.setPackage("com.whatsapp");
+		sendIntent.setType("text/plain");
+		startActivity(sendIntent);
+	}
+	
 }

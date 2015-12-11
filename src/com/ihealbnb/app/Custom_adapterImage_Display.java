@@ -17,18 +17,20 @@ import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 public class Custom_adapterImage_Display extends PagerAdapter {
 
 		private Activity _activity;
 	    private ArrayList<String> _imagePaths;
 	    private LayoutInflater inflater;
-	 
+	   
 	    // constructor
 	    public Custom_adapterImage_Display(Activity activity,
 	            ArrayList<String> imagePaths) {
 	        this._activity = activity;
 	        this._imagePaths = imagePaths;
+	       
 	    }
 	 
 	    @Override
@@ -44,17 +46,16 @@ public class Custom_adapterImage_Display extends PagerAdapter {
 	    @Override
 	    public Object instantiateItem(ViewGroup container, int position) {
 	    	Custom_touchImageView imgDisplay;
-	        ImageButton btnClose;
-	  
+	      View viewLayout = null;
 	        inflater = (LayoutInflater) _activity
 	                .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-	        View viewLayout = inflater.inflate(R.layout.custom_show_image, container,
+	        viewLayout = inflater.inflate(R.layout.custom_show_image, container,
 	                false);
-	  
-	        imgDisplay = (Custom_touchImageView) viewLayout.findViewById(R.id.imgDisplay);
-	        btnClose = (ImageButton) viewLayout.findViewById(R.id.btnClose);
-	         
 	        
+	        imgDisplay = (Custom_touchImageView) viewLayout.findViewById(R.id.imgDisplay);
+	       
+	         
+	       
 	        Picasso.with(_activity)
 	        .load(_imagePaths.get(position))
 	        .into(imgDisplay);
@@ -64,13 +65,8 @@ public class Custom_adapterImage_Display extends PagerAdapter {
 	        imgDisplay.setImageBitmap(bitmap);*/
 	         
 	        // close button click event
-	        btnClose.setOnClickListener(new View.OnClickListener() {            
-	            @Override
-	            public void onClick(View v) {
-	                _activity.finish();
-	            }
-	        });
-	  
+	       
+	        
 	        ((ViewPager) container).addView(viewLayout);
 	  
 	        return viewLayout;

@@ -6,6 +6,7 @@
     -->
     <style name="AppBaseTheme" parent="@android:style/Theme.Holo.Light.NoActionBar">
         <!-- API 11 theme customizations can go here. -->
+       
         <item name="android:windowBackground">@color/app_white</item>
           <item name="android:colorBackground">@color/app_white</item>
     </style>

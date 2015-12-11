@@ -1,0 +1,216 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="${relativePackage}.${activityClass}" >
+    
+    
+<include layout = "@layout/app_header"/>
+
+<LinearLayout 
+    android:layout_height="0dp"
+    android:layout_width="match_parent"
+    android:layout_weight="9.0">
+    
+    <ScrollView
+                android:id="@+id/scrollViewBasicInfo"
+                android:layout_width="match_parent"
+                android:layout_marginTop="5dp"
+                android:layout_height="wrap_content" >
+
+             <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical" >
+
+                 <LinearLayout
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:orientation="horizontal"
+                     android:layout_margin="5dp">
+
+                     <TextView
+                         android:id="@+id/txtName"
+                         android:layout_width="0dp"
+                         android:layout_weight="1.0"
+                         android:textSize="@dimen/txt_app_labels_normal"
+                         android:layout_height="wrap_content"
+                         android:text="Name" />
+
+                     <EditText
+                         android:id="@+id/edtUserName"
+                         android:layout_width="0dp"
+                         android:layout_height="wrap_content"
+                         android:layout_marginLeft="10dp"
+                         android:textSize="@dimen/txt_app_labels_normal"
+                         android:maxLines="1"
+
+                         android:layout_weight="2.0"
+                         android:ems="10" >
+
+                         <requestFocus />
+                     </EditText>
+
+                 </LinearLayout>
+
+                 <LinearLayout
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:orientation="horizontal"
+                     android:layout_margin="5dp">
+
+                     <TextView
+                         android:id="@+id/txtemail"
+                         android:layout_width="0dp"
+                         android:layout_weight="1.0"
+                         android:textSize="@dimen/txt_app_labels_normal"
+                         android:layout_height="wrap_content"
+                         android:text="Email" />
+
+                     <EditText
+                         android:id="@+id/edtUserEmail"
+                         android:layout_width="0dp"
+                         android:layout_height="wrap_content"
+                         android:layout_marginLeft="10dp"
+                         android:textSize="@dimen/txt_app_labels_normal"
+                         android:maxLines="1"
+                         android:layout_weight="2.0"
+                         android:ems="10" >
+
+                         <requestFocus />
+                     </EditText>
+
+                 </LinearLayout>
+
+                 <LinearLayout
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:orientation="horizontal"
+                     android:layout_margin="5dp">
+
+                     <TextView
+                         android:id="@+id/txtNumber"
+                         android:layout_width="0dp"
+                         android:layout_weight="1.0"
+                         android:textSize="@dimen/txt_app_labels_normal"
+                         android:layout_height="wrap_content"
+                         android:text="Mobile" />
+
+                     <EditText
+                         android:id="@+id/edtUserNumber"
+                         android:layout_width="0dp"
+                         android:layout_height="wrap_content"
+                         android:layout_marginLeft="10dp"
+                         android:textSize="@dimen/txt_app_labels_normal"
+                         android:maxLines="1"
+                         android:inputType="number"
+                         android:layout_weight="2.0"
+                         android:ems="10" >
+
+                         <requestFocus />
+                     </EditText>
+
+                 </LinearLayout>
+
+                 <LinearLayout
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:orientation="horizontal"
+                     android:layout_margin="5dp">
+
+                     <TextView
+                         android:id="@+id/txtUsername_login"
+                         android:layout_width="0dp"
+                         android:layout_weight="1.0"
+                         android:textSize="@dimen/txt_app_labels_normal"
+                         android:layout_height="wrap_content"
+                         android:text="Username" />
+
+                     <EditText
+                         android:id="@+id/edtUsername_login"
+                         android:layout_width="0dp"
+                         android:layout_height="wrap_content"
+                         android:layout_marginLeft="10dp"
+                         android:textSize="@dimen/txt_app_labels_normal"
+                         android:maxLines="1"
+                         android:layout_weight="2.0"
+                         android:ems="10" >
+
+                         <requestFocus />
+                     </EditText>
+
+                 </LinearLayout>
+
+                 <LinearLayout
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:orientation="horizontal"
+                     android:layout_margin="5dp">
+
+                     <TextView
+                         android:id="@+id/txtPassword"
+                         android:layout_width="0dp"
+                         android:layout_weight="1.0"
+                         android:textSize="@dimen/txt_app_labels_normal"
+                         android:layout_height="wrap_content"
+                         android:text="Password" />
+
+                     <EditText
+                         android:id="@+id/edtUserPassword"
+                         android:layout_width="0dp"
+                         android:layout_height="wrap_content"
+                         android:layout_marginLeft="10dp"
+                         android:textSize="@dimen/txt_app_labels_normal"
+                         android:maxLines="1"
+                         android:inputType="textPassword"
+                         android:layout_weight="2.0"
+                         android:ems="10" >
+
+                         <requestFocus />
+                     </EditText>
+
+
+
+                 </LinearLayout>
+
+                 <!--<TextView
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:textColor="@drawable/selector_text_black_to_white"
+                     android:layout_gravity="end"
+                     android:layout_marginRight="5dp"
+                     android:text="show"/>-->
+
+
+                 <CheckBox
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:text="Show"
+                     android:id="@+id/checkBoxPassword"
+                     android:layout_marginRight="5dp"
+                     android:layout_gravity="right" />
+
+                 <Button
+                     android:id="@+id/btnRegister"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_marginTop="15dp"
+                     android:text="Register"
+                     
+                     android:paddingLeft="15dp"
+                     android:paddingRight="15dp"
+                     android:background="@drawable/selecter_registerdoctor_btn"
+                     android:textColor="@color/app_white"
+                     android:layout_gravity="center"/>
+
+
+             </LinearLayout>
+            </ScrollView>
+    
+    
+    
+    
+</LinearLayout>
+
+</LinearLayout>

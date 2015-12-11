@@ -3,6 +3,9 @@ package com.ihealbnb.app;
 
 
 import android.app.Activity;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.BitmapFactory.Options;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -19,8 +22,7 @@ public class Activity_aboutUs extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_about_us);
-		
-		
+		//resizeImages();
 		TextView txtHeader = (TextView)findViewById(R.id.txtHeader);
 		 txtHeader.setText("About Us");
 		TextView txtsub = (TextView)findViewById(R.id.txtHeadershot);
@@ -44,5 +46,17 @@ public class Activity_aboutUs extends Activity {
 				Activity_aboutUs.this.finish();
 			}
 		});
+	}
+	
+	private void resizeImages(){
+		 ImageView imgViewLogo = (ImageView)findViewById(R.id.imgViewCompany);
+
+		  int screenWidth = Globals.getScreenSize(this).x;
+		  int logoWidth = screenWidth/100 * 50 ;
+		  Options options = new BitmapFactory.Options();
+		  options.inScaled = false;
+		  Bitmap logo = BitmapFactory.decodeResource(getResources(), R.drawable.icon_app_header, options);
+		  logo = Globals.scaleToWidth(logo,logoWidth);
+		  imgViewLogo.setImageBitmap(logo);
 	}
 }

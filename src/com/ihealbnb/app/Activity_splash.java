@@ -55,7 +55,7 @@ public class Activity_splash extends Activity {
 		ImageView imgViewLogo = (ImageView)findViewById(R.id.imgLogoXB);
 
 		  int screenWidth = Globals.getScreenSize(this).x;
-		  int logoWidth = screenWidth/100 * 50 ;
+		  int logoWidth = screenWidth/100 * 60 ;
 		  Options options = new BitmapFactory.Options();
 		  options.inScaled = false;
 		  Bitmap logo = BitmapFactory.decodeResource(getResources(), R.drawable.xb, options);

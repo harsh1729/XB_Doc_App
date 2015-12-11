@@ -17,6 +17,7 @@ import com.android.volley.Response.Listener;
 
 import android.app.Activity;
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
@@ -25,6 +26,7 @@ import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -34,13 +36,15 @@ import android.widget.TextView;
 
 public class Activity_chooseCity extends Activity {
 
-	public static ArrayList<Object_City> listCity;
+	public ArrayList<Object_City> listCity;
 	Custom_adapterCity adapter;
 	ProgressDialog pd;
+	EditText edtSearch;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_choose_city);
+		edtSearch = (EditText)findViewById(R.id.edtSearch);
 		getAllCity();
 		listCity = new ArrayList<Object_City>();
 		final LinearLayout linearHeader = (LinearLayout)findViewById(R.id.linearHeader);
@@ -64,7 +68,10 @@ public class Activity_chooseCity extends Activity {
 			@Override
 			public void onClick(View arg0) {
 				// TODO Auto-generated method stub
-				
+				edtSearch.requestFocus();
+				InputMethodManager keyboard = (InputMethodManager)
+		                getSystemService(Context.INPUT_METHOD_SERVICE);
+		                keyboard.showSoftInput(edtSearch, 0);
 				LinearLayout linear = (LinearLayout) findViewById(R.id.linearSearch);
 				linear.setVisibility(View.VISIBLE);
 				imgSearch.setVisibility(View.GONE);
@@ -81,6 +88,7 @@ public class Activity_chooseCity extends Activity {
 				
 				LinearLayout linear = (LinearLayout) findViewById(R.id.linearSearch);
 				//edt.setText("");
+				hideKeyboard();
 				linear.setVisibility(View.GONE);
 				imgSearch.setVisibility(View.VISIBLE);
 				linearHeader.setVisibility(View.VISIBLE);
@@ -91,7 +99,7 @@ public class Activity_chooseCity extends Activity {
 		
 		//set City in Adapter
 		showData();
-		EditText edtSearch = (EditText)findViewById(R.id.edtSearch);
+		
 		edtSearch.addTextChangedListener(new TextWatcher() {
 			
 			@Override
@@ -222,5 +230,12 @@ public class Activity_chooseCity extends Activity {
 		}
 	}
 	
+	private void hideKeyboard() {   
+	    // Check if no view has focus:
+	     if (edtSearch != null) {
+	        InputMethodManager inputManager = (InputMethodManager) this.getSystemService(Context.INPUT_METHOD_SERVICE);
+	        inputManager.hideSoftInputFromWindow(edtSearch.getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
+	    }
 	
+	}
 }

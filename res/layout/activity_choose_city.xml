@@ -5,7 +5,9 @@
     android:orientation="vertical"
     android:isScrollContainer="false"
      tools:context="${relativePackage}.${activityClass}" >
-
+     
+    
+    
     <include layout="@layout/app_header" />
 
     <!-- <LinearLayout
@@ -36,14 +38,13 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_margin="20dp"
-        android:layout_weight="8.0" 
+        android:layout_weight="7.0" 
        >
     </ListView>
     
     <LinearLayout 
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_margin="20dp"
-        android:layout_weight="1.0" ></LinearLayout>
+        android:layout_weight="0.5" ></LinearLayout>
 
 </LinearLayout>

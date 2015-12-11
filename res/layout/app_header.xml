@@ -21,7 +21,9 @@
             android:id="@+id/imgBack"
             android:layout_width="wrap_content"
             android:layout_margin="3dp"
-            android:layout_height="match_parent"
+            android:paddingTop="3dp"
+            android:paddingBottom="3dp"
+            android:layout_height="wrap_content"
             android:background="@drawable/back"
             android:scaleType="fitCenter"
              />
@@ -59,6 +61,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1.5"
+            android:layout_marginRight="3dp"
             android:background="@drawable/back"
             android:src="@drawable/ic_action_search" />
         
@@ -67,6 +70,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1.5"
+            android:layout_marginRight="3dp"
             android:background="@drawable/back"
             android:src="@drawable/ic_action_place" />
         
@@ -74,9 +78,21 @@
             android:id="@+id/imgOption"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginRight="3dp"
             android:layout_weight="1.5"
             android:background="@drawable/back"
             android:src="@drawable/ic_action_overflow" />
+         <ImageView
+            android:id="@+id/imgHelp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp"
+            android:layout_marginRight="3dp"
+            android:layout_weight="1.5"
+            android:visibility="gone"
+            android:background="@drawable/back"
+            android:src="@android:drawable/ic_dialog_info" />
 
         <LinearLayout
             android:id="@+id/linearSearch"

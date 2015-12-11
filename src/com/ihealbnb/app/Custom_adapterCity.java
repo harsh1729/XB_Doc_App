@@ -23,21 +23,23 @@ public class Custom_adapterCity extends BaseAdapter implements Filterable {
 
 	private Context mContext;
 	private ArrayList<Object_City> listCity;
+	private ArrayList<Object_City> filterCity;
 	/*private int mPosition;
 	private View view;*/
-	AccountFilter mFilter;
+	CityFilter mFilter;
   
 	// Gets the context so it can be used later
 	public Custom_adapterCity(Context c,
 			ArrayList<Object_City> listCity) {
 		mContext = c;
 		this.listCity = listCity;
+		this.filterCity = listCity;
 		
 	}
 
 	// Total number of things contained within the adapter
 	public int getCount() {
-		return listCity.size();
+		return filterCity.size();
 	}
 
 	// Require for structure, not really used in my code.
@@ -54,7 +56,7 @@ public class Custom_adapterCity extends BaseAdapter implements Filterable {
 
 	public View getView(final int position, View convertView, ViewGroup parent) {
 
-		 final Object_City city = listCity.get(position);
+		 final Object_City city = filterCity.get(position);
 		if (convertView == null) {
 	        // This a new view we inflate the new layout
 	        LayoutInflater inflater = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
@@ -77,12 +79,23 @@ public class Custom_adapterCity extends BaseAdapter implements Filterable {
                 		Intent i = new Intent(mContext,Activity_Home.class);
                     	((Activity)mContext).startActivity(i);
                     	((Activity)mContext).finish();
-                    	}else{
-                    		objConfig.setCityName(city.name);
-                        	objConfig.setCityId(city.id);
-                        	Intent i = new Intent(mContext,Activity_category.class);
-                        	((Activity)mContext).startActivity(i);
-                        	((Activity)mContext).finish();
+                    	}
+                	 else{
+                		 
+                		 if(!objConfig.getbool()){
+                		    // goes to home
+                			objConfig.setCityName(city.name);
+                         	objConfig.setCityId(city.id);
+                         	((Activity)mContext).finish();
+                			 
+                		 }else{
+                			 //goes to doctor list
+                			objConfig.setCityName(city.name);
+                          	objConfig.setCityId(city.id);
+                          	Intent i = new Intent(mContext,Activity_category.class);
+                          	((Activity)mContext).startActivity(i);
+                          	((Activity)mContext).finish(); 
+                		 }
                     	}
                 	
 					
@@ -93,7 +106,7 @@ public class Custom_adapterCity extends BaseAdapter implements Filterable {
 	
 	}
 
-	private class AccountFilter extends Filter {
+	private class CityFilter extends Filter {
 
 		@SuppressLint("DefaultLocale")
 		@Override
@@ -106,8 +119,8 @@ public class Custom_adapterCity extends BaseAdapter implements Filterable {
 			// we just set the `values` property to the
 			// original contacts list which contains all of them
 			if (constraint == null || constraint.length() == 0) {
-				results.values = Activity_chooseCity.listCity;
-				results.count = Activity_chooseCity.listCity.size();
+				results.values = listCity;
+				results.count = listCity.size();
 			} else {
 				// Some search copnstraint has been passed
 				// so let's filter accordingly
@@ -116,7 +129,7 @@ public class Custom_adapterCity extends BaseAdapter implements Filterable {
 				// We'll go through all the contacts and see
 				// if they contain the supplied string
 				
-				for (Object_City c : Activity_chooseCity.listCity) {
+				for (Object_City c : listCity) {
 					if (c.name.toUpperCase().contains(
 							constraint.toString().toUpperCase())) {
 						filteredCity.add(c);
@@ -126,7 +139,7 @@ public class Custom_adapterCity extends BaseAdapter implements Filterable {
 				// Finally set the filtered values and size/count
 				results.values = filteredCity;
 				results.count = filteredCity.size();
-				Log.i("SUSHIL", "Filtered class return result");
+				//Log.i("SUSHIL", "Filtered class return result");
 			}
 
 			// Return our FilterResults object
@@ -136,7 +149,7 @@ public class Custom_adapterCity extends BaseAdapter implements Filterable {
 		@Override
 		protected void publishResults(CharSequence constraint,
 				FilterResults results) {
-			listCity = (ArrayList<Object_City>) results.values;
+			filterCity = (ArrayList<Object_City>) results.values;
 			notifyDataSetChanged();
 		}
 	}
@@ -144,7 +157,7 @@ public class Custom_adapterCity extends BaseAdapter implements Filterable {
 	@Override
 	public Filter getFilter() {
 		if (mFilter == null)
-			mFilter = new AccountFilter();
+			mFilter = new CityFilter();
 
 		return mFilter;
 	}

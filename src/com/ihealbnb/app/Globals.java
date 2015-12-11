@@ -4,11 +4,14 @@ import java.io.InputStream;
 import java.io.OutputStream;
 
 import android.annotation.SuppressLint;
+import android.annotation.TargetApi;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.pm.ApplicationInfo;
+import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.Bitmap.Config;
 import android.graphics.Canvas;
@@ -18,34 +21,47 @@ import android.graphics.PorterDuff.Mode;
 import android.graphics.PorterDuffXfermode;
 import android.graphics.Rect;
 import android.graphics.RectF;
+import android.os.Build;
 import android.util.Log;
 import android.view.Display;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.google.android.gms.maps.model.LatLng;
 import com.squareup.picasso.Picasso;
 import com.squareup.picasso.RequestCreator;
 
+
 public class Globals {
-	// public static final String FILE_UPLOAD_URL =
-	// "http://newstest2.tk/newsci/admin_requests/news/mob_upload_image";
-	// public static String LOGIN_AGENT_URL =
-	// "http://newstest2.tk/newsci/admin_requests/user/loginAuth";
+	public final static String APP_TITLE = "iHeal App";
+
+	public final static String PNAME = "com.ihealbnb.app";
+
 	public static final int VOLLEY_TIMEOUT_MILLISECS = 10000;
-	public static final String DEFAULT_APP_SERVER_PATH = "http://xbnews.in/dr/client_requests/";
+
+	public static final String DEFAULT_APP_SERVER_PATH = "http://newstest12.tk/client_requests/";
+	//http://xbnews.in/dr/client_requests/
 	// http://xercesblue.in/dr/client_requests/city/getAllCities
 	public static final String MSG_SERVER_ERROR = "Error occured on server. Please try again";
-	public static final String INTERNET_ERROR = "Please check your Internet connection";
-	public static final String OPTION_SHARE = "Share";
-	public static final String OPTION_CHANGE_LOCATION = "Change Location";
-	public static final String OPTION_ABOUT_US = "About Us";
 
-	public final static String SHARE_LINK_GENERIC = "http://xercesblue.in/download/androidApp.php?id=5";
-	public final static String SHARE_LINK_WhatsApp = "http://xercesblue.in/download/androidApp.php?id=4";
-	public final static String SHARE_LINK_Facebook = "http://xercesblue.in/download/androidApp.php?id=3";
-	public final static String SHARE_APP_MSG = " ";
+	public static final String INTERNET_ERROR = "Please check your Internet connection";
+
+	public static final String OPTION_SHARE = "Share";
+
+	public static final String OPTION_CHANGE_LOCATION = "Change Location";
+
+	public static final String OPTION_ABOUT_US = "About us";
+
+	public static final String OPTION_RATE_US = "Rate us";
+	
+	public static final String OPTION_REGISTER_DOCTOR = "Doctor Zone";
+
+	public final static String SHARE_LINK_GENERIC = "https://play.google.com/store/apps/details?id=com.ihealbnb.app&hl=en";
+	
+	public final static String SHARE_APP_MSG = "I found a new App about Doctors details and location,Download free iHeal App at";
 
 	/*********************************************/
+	
 	static public Point getAppButtonSize(Activity context) {
 
 		int screenWidth = Globals.getScreenSize(context).x;
@@ -58,15 +74,14 @@ public class Globals {
 		return size;
 	}
 
-	/*public static float dpFromPx(final Context context, final float px) {
-	    return px / context.getResources().getDisplayMetrics().density;
-	}
+	/*
+	 * public static float dpFromPx(final Context context, final float px) {
+	 * return px / context.getResources().getDisplayMetrics().density; }
+	 * 
+	 * public static float pxFromDp(final Context context, final float dp) {
+	 * return dp * context.getResources().getDisplayMetrics().density; }
+	 */
 
-	public static float pxFromDp(final Context context, final float dp) {
-	    return dp * context.getResources().getDisplayMetrics().density;
-	}*/
-	
-	
 	@SuppressWarnings("deprecation")
 	@SuppressLint("NewApi")
 	static public Point getScreenSize(Activity currentActivity) {
@@ -155,7 +170,7 @@ public class Globals {
 		}
 	}
 
-	public static void showAlert(String tiString, String msgString,
+	/*public static void showAlert(String tiString, String msgString,
 			Context context) {
 		AlertDialog.Builder builder = new AlertDialog.Builder(context,
 				AlertDialog.THEME_HOLO_LIGHT);
@@ -168,7 +183,35 @@ public class Globals {
 		AlertDialog alert = builder.create();
 		alert.show();
 
+	}*/
+	
+	
+	@TargetApi(Build.VERSION_CODES.HONEYCOMB) 
+	public static void showAlert(String tiString, String msgString,
+			Context context) {
+		AlertDialog.Builder builder = null;
+		if(Build.VERSION.SDK_INT >= 11) {
+			//API level 11 and above ctor here
+		builder = new AlertDialog.Builder(context,
+					AlertDialog.THEME_HOLO_LIGHT);
+		} else {
+			//Lower than API level 11 code here
+			builder = new AlertDialog.Builder(context);
+		}
+
+
+		builder.setTitle(tiString);
+		builder.setMessage(msgString).setCancelable(false)
+				.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+					public void onClick(DialogInterface dialog, int id) {
+					}
+				});
+		AlertDialog alert = builder.create();
+		alert.show();
+
 	}
+
+	
 
 	public static void CopyStream(InputStream is, OutputStream os) {
 		final int buffer_size = 1024;
@@ -184,11 +227,17 @@ public class Globals {
 		}
 	}
 
+	
+	@TargetApi(Build.VERSION_CODES.HONEYCOMB)
 	public static ProgressDialog showLoadingDialog(ProgressDialog mDialog,
 			Activity act, Boolean cancelable, String title) {
 
 		if (mDialog == null) {
+		if(Build.VERSION.SDK_INT >= 11) {
 			mDialog = new ProgressDialog(act, ProgressDialog.THEME_HOLO_LIGHT);
+		}else{
+			mDialog = new ProgressDialog(act);
+		}
 			mDialog.setTitle(title);
 			mDialog.setMessage("Please wait for a moment...");
 			mDialog.setCancelable(cancelable);
@@ -212,8 +261,47 @@ public class Globals {
 	public static void showShortToast(Context con, String msg) {
 		Toast.makeText(con, msg, Toast.LENGTH_SHORT).show();
 	}
-
+	
+	
+	
+	@TargetApi(Build.VERSION_CODES.HONEYCOMB) 
 	public static void showAlertDialog(String title, String msg,
+			Context context, String positiveButtonText,
+			DialogInterface.OnClickListener listnerPositive,
+			String negativeButtonText,
+			DialogInterface.OnClickListener listnerNegative,
+			Boolean isCancelable) {
+
+		AlertDialog alertDialog = null;
+		 /*= new AlertDialog.Builder(context,
+				AlertDialog.THEME_HOLO_LIGHT).create();*/
+
+		if(Build.VERSION.SDK_INT >= 11) {
+			//API level 11 and above ctor here
+			alertDialog = new AlertDialog.Builder(context,
+					AlertDialog.THEME_HOLO_LIGHT).create();
+		} else {
+			//Lower than API level 11 code here
+			alertDialog = new AlertDialog.Builder(context).create();
+		}
+
+		alertDialog.setTitle(title);
+		alertDialog.setMessage(msg);
+		alertDialog.setCancelable(isCancelable);
+		alertDialog.setIcon(android.R.drawable.ic_dialog_alert);
+		alertDialog.setButton(AlertDialog.BUTTON_POSITIVE, positiveButtonText,
+				listnerPositive);
+
+		if (negativeButtonText != null && !negativeButtonText.equals("")) {
+			alertDialog.setButton(AlertDialog.BUTTON_NEGATIVE,
+					negativeButtonText, listnerNegative);
+		}
+		alertDialog.show();
+
+	}
+
+
+	/*public static void showAlertDialog(String title, String msg,
 			Context context, String positiveButtonText,
 			DialogInterface.OnClickListener listnerPositive,
 			String negativeButtonText,
@@ -236,7 +324,7 @@ public class Globals {
 		}
 		alertDialog.show();
 
-	}
+	}*/
 
 	public static void loadImageIntoImageView(ImageView iv, String imgURL,
 			Context context) {
@@ -280,13 +368,16 @@ public class Globals {
 					rq.placeholder(loadingImgId);
 				if (errorImgId != 0)
 					rq.error(errorImgId);
-				if (transformRadius != 0){
-					//rq.transform(new Custom_PiccasoRoundedTransformation(transformRadius, transformMargin));
+				if (transformRadius != 0) {
+					// rq.transform(new
+					// Custom_PiccasoRoundedTransformation(transformRadius,
+					// transformMargin));
 				}
-				if (width != 0){
-					//Log.i("SUSHIL", "size of height width "+width+","+height);
-					//rq.resize(width, height);
-					//rq.centerCrop();
+				if (width != 0) {
+					// Log.i("SUSHIL",
+					// "size of height width "+width+","+height);
+					// rq.resize(width, height);
+					// rq.centerCrop();
 				}
 			} else
 				rq = p.load(errorImgId);
@@ -311,4 +402,33 @@ public class Globals {
 
 	}
 
+	  
+	
+ public static LatLng getCurrentLocation(Context mContext) {
+
+	Custom_GPSTrack gps = new Custom_GPSTrack(mContext);
+	// check if GPS enabled
+	LatLng obj = null;
+	if (gps.canGetLocation()) {
+		double latitude = gps.getLatitude();
+		double longitude = gps.getLongitude();
+		obj = new LatLng(latitude, longitude);
+	} else {
+		gps.showSettingsAlert();
+	}
+	return obj;
+}
+ 
+ public static boolean isGoogleMapsInstalled(Context mContext)
+	{
+	    try
+	    {
+	        ApplicationInfo info = mContext.getPackageManager().getApplicationInfo("com.google.android.apps.maps", 0 );
+	        return true;
+	    } 
+	    catch(PackageManager.NameNotFoundException e)
+	    {
+	        return false;
+	    }
+	}
 }

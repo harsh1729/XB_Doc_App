@@ -6,94 +6,12 @@
     tools:context="${relativePackage}.${activityClass}" >
 
     <!-- include header in Activity -->
-   
-    <include layout="@layout/app_header" />
+   <include layout="@layout/app_header" />
 
-    <!--
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@color/LightGrey" >
-    </LinearLayout>
-    -->
-
-
-    <!--
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
-
-        <TextView
-            android:id="@+id/textView1"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="10"
-            android:gravity="center"
-            android:paddingLeft="4dp"
-            android:paddingRight="4dp"
-            android:paddingTop="8dp"
-            android:paddingBottom="8dp"
-            android:text="My Health"
-            android:textColor="@color/Gray" />
-
-        <LinearLayout
-            android:layout_width="1dp"
-            android:layout_height="match_parent"
-            android:layout_marginBottom="2dp"
-            android:layout_marginTop="2dp"
-            android:background="@color/LightGrey"
-            android:orientation="vertical" >
-        </LinearLayout>
-
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="10"
-            android:gravity="center"
-            android:paddingLeft="4dp"
-            android:paddingRight="4dp"
-            android:paddingTop="8dp"
-            android:paddingBottom="8dp"
-            android:text="Appointments"
-            android:textColor="@color/Gray" />
-
-        <LinearLayout
-            android:layout_width="1dp"
-            android:layout_height="match_parent"
-            android:layout_marginBottom="2dp"
-            android:layout_marginTop="2dp"
-            android:background="@color/LightGrey"
-            android:orientation="vertical" >
-        </LinearLayout>
-
-        <TextView
-            android:id="@+id/textView3"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="10"
-            android:gravity="center"
-            android:paddingLeft="4dp"
-            android:paddingRight="4dp"
-            android:paddingTop="8dp"
-            android:paddingBottom="8dp"
-            android:text="Meet Us"
-            android:textColor="@color/Gray" />
-    </LinearLayout>
-    -->
-
-
-    <!--
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@color/LightGrey" >
-    </LinearLayout>
-    -->
 <RelativeLayout 
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="9.0"
+        android:layout_weight="8.8"
          >
 
     <ScrollView
@@ -125,9 +43,8 @@
          <LinearLayout 
                  android:layout_width="0dp"
                  android:layout_weight="1"
-        		 android:layout_height="match_parent"
-        		 android:background="@color/app_transparent">               
-             </LinearLayout>  
+        		 android:layout_height="match_parent">
+        	</LinearLayout>  
             
              <ListView 
                  android:layout_width="0dp"
@@ -135,7 +52,7 @@
         		 android:layout_height="wrap_content"
                  android:id="@+id/listViewOptions"
                  android:dividerHeight="0dp"
-                 android:background="@color/app_tranparent_black"
+                 android:background="@color/app_white"
                  android:visibility="gone"
                  >
                  

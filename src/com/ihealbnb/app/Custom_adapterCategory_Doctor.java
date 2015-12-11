@@ -17,6 +17,7 @@ import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Filter;
 import android.widget.Filterable;
 import android.widget.ImageButton;
@@ -30,12 +31,14 @@ public class Custom_adapterCategory_Doctor extends BaseAdapter implements
 	private ArrayList<Object_Doctors> doctersList;
 	AccountFilter mFilter;
 	Context mContext;
+	EditText edt;
 
 	// Gets the context so it can be used later
 	public Custom_adapterCategory_Doctor(Context c,
-			ArrayList<Object_Doctors> doctersList) {
+			ArrayList<Object_Doctors> doctersList,EditText edt) {
 		mContext = c;
 		this.doctersList = doctersList;
+		this.edt = edt;
 
 	}
 
@@ -98,6 +101,7 @@ public class Custom_adapterCategory_Doctor extends BaseAdapter implements
 					txtQualification.setText(obj.Qualification);
 				else
 					txtQualification.setVisibility(View.GONE);
+				
 				txtFee.setText("FEES " + (int) obj.Fees + "/-");
 
 				int totalContent = Globals.getScreenSize((Activity) mContext).x;
@@ -124,7 +128,7 @@ public class Custom_adapterCategory_Doctor extends BaseAdapter implements
 						 * Picasso.with(mContext) .load(obj.imageUrl)
 						 * .into(img);
 						 */
-						Log.i("SUSHIL", "image width " + imgWidth);
+						//Log.i("SUSHIL", "image width " + imgWidth);
 
 						// Globals.loadImageIntoImageView(img,obj.imageUrl,
 						// 10,4, mContext,0,0);
@@ -141,13 +145,20 @@ public class Custom_adapterCategory_Doctor extends BaseAdapter implements
 					@Override
 					public void onClick(View v) {
 
-						Log.i("SUSHIL", "Onclick cate doctor " + obj.id);
+						//Log.i("SUSHIL", "Onclick cate doctor " + obj.id);
+						Custom_ConnectionDetector con = new Custom_ConnectionDetector(mContext);
+						if(con.isConnectingToInternet()){
 						Object_AppConfig objConfig = new Object_AppConfig(
 								mContext);
 						objConfig.setDoctorId(obj.id);
 						Intent i = new Intent(mContext,
 								Activity_detailsProfile.class);
+						edt.setText(" ");
 						((Activity) mContext).startActivity(i);
+						//((Activity) mContext).overridePendingTransition(R.anim.animation_push_out, R.anim.animation_push_in);
+						}else{
+							Globals.showAlert("Error", Globals.INTERNET_ERROR, mContext);
+						}
 					}
 				});
 

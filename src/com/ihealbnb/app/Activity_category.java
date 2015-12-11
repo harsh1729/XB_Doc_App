@@ -58,6 +58,7 @@ public class Activity_category extends Activity {
 		TextView header = (TextView)findViewById(R.id.txtHeader);
 		TextView txtCityName = (TextView) findViewById(R.id.txtHeadershot);
 		header.setText(objConfig.getCatName());
+		header.setMaxLines(1);
 		txtCityName.setText(objConfig.getCityName());
 
 		// hide layout on click search and set OnClickListener
@@ -77,6 +78,11 @@ public class Activity_category extends Activity {
 			public void onClick(View arg0) {
 				// TODO Auto-generated method stub
 				//showKeyboard();
+				edt.requestFocus();
+				InputMethodManager keyboard = (InputMethodManager)
+		                getSystemService(Context.INPUT_METHOD_SERVICE);
+		                keyboard.showSoftInput(edt, 0);
+		                
 				LinearLayout linear = (LinearLayout) findViewById(R.id.linearSearch);
 				linear.setVisibility(View.VISIBLE);
 				imgSearch.setVisibility(View.GONE);
@@ -94,6 +100,7 @@ public class Activity_category extends Activity {
 				//hideKeyboard();
 				LinearLayout linear = (LinearLayout) findViewById(R.id.linearSearch);
 				edt.setText("");
+				hideKeyboard();
 				linear.setVisibility(View.GONE);
 				imgSearch.setVisibility(View.VISIBLE);
 				linearHeader.setVisibility(View.VISIBLE);
@@ -117,10 +124,12 @@ public class Activity_category extends Activity {
 			public void onClick(View arg0) {
 				// TODO Auto-generated method stub
 				//((Activity) Activity_Home.con).finish();
+				Object_AppConfig obj = new Object_AppConfig(Activity_category.this);
+				obj.setbool(true);
 				Intent i = new Intent(Activity_category.this,
 						Activity_chooseCity.class);
 				startActivity(i);
-				Activity_category.this.finish();
+			    Activity_category.this.finish();
 
 			}
 		});
@@ -159,7 +168,7 @@ public class Activity_category extends Activity {
 	private void showData(){
 		ListView listView = (ListView) findViewById(R.id.listView);
 		 adapter = new Custom_adapterCategory_Doctor(
-				this, listDoctors);
+				this, listDoctors,edt);
 		listView.setAdapter(adapter);
 	}
 
@@ -227,7 +236,7 @@ public class Activity_category extends Activity {
 					@Override
 					public void onResponse(JSONArray response) {
 						Globals.hideLoadingDialog(pd);
-						Log.i("SUSHIL", "json Response recieved !!"+response);
+						//Log.i("SUSHIL", "json Response recieved !!"+response);
 						parseResponce(response);
 						
 					}
@@ -238,7 +247,7 @@ public class Activity_category extends Activity {
 					@Override
 					public void onErrorResponse(VolleyError err) {
 						Globals.hideLoadingDialog(pd);
-						Log.i("SUSHIL", "ERROR VolleyError");
+						//Log.i("SUSHIL", "ERROR VolleyError");
 						Globals.showShortToast(Activity_category.this,
 								Globals.MSG_SERVER_ERROR);
 					}
@@ -317,6 +326,15 @@ public class Activity_category extends Activity {
 			  Toast.makeText(this,"No Doctor found", Toast.LENGTH_SHORT).show();
 		  }
 		}
+	}
+	
+	private void hideKeyboard() {   
+	    // Check if no view has focus:
+	     if (edt != null) {
+	        InputMethodManager inputManager = (InputMethodManager) this.getSystemService(Context.INPUT_METHOD_SERVICE);
+	        inputManager.hideSoftInputFromWindow(edt.getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
+	    }
+	
 	}
 	
 	
