@@ -130,7 +130,7 @@ public class Custom_adapter_RegisterDoctor extends PagerAdapter {
 			for (Object_DoctorCategory obj : listcate) {
 				index++;
 				list.add(obj.Name);
-				mapCate.put(index, obj.catId);
+				mapCate.put(index, obj.id);
 			}
 			Spinner spin = (Spinner) view.findViewById(R.id.spinner1);
 			setSpinnerData(list, spin);
@@ -429,7 +429,7 @@ public class Custom_adapter_RegisterDoctor extends PagerAdapter {
 	private void removeImageView(View view) {
 
 		int selectedId = selectedImageView.getId();
-		Log.i("SUSHIL", "SUSHIl   remove image id" + selectedId);
+		//Log.i("SUSHIL", "SUSHIl   remove image id" + selectedId);
 		LinearLayout linear = (LinearLayout) view
 				.findViewById(R.id.linearHospital_register);
 		int child = linear.getChildCount();
@@ -552,7 +552,7 @@ public class Custom_adapter_RegisterDoctor extends PagerAdapter {
 				// TODO Auto-generated method stub
 				// spinnerSelectedId = position;
 				Object_DoctorCategory obj = listcate.get(position);
-				objRegister.catId = obj.catId;
+				objRegister.catId = obj.id;
 
 			}
 
@@ -751,11 +751,15 @@ public class Custom_adapter_RegisterDoctor extends PagerAdapter {
 				googleMap.addMarker(markerOptions);
 
 				// Locate the first location
-				if (i == 0)
+				if (i == 0){
 					googleMap.animateCamera(CameraUpdateFactory
-							.newLatLng(latLng));
+							.newLatLngZoom(latLng, 14));
+				//	newLatLng(latLng),14)
+					/*googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(
+							latLng, 14));*/
 				objRegister.lat = latLng.latitude;
 				objRegister.lng = latLng.longitude;
+				}
 			}
 		}
 	}

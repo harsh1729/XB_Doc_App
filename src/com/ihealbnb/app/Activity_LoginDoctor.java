@@ -239,6 +239,7 @@ private void navigation(JSONObject obj,String isActive){
 	i.putExtra("details", obj.toString());
 	i.putExtra("isactive", isActive);
 	startActivity(i);
+	setEmpty();
 	//this.finish();
 }
 

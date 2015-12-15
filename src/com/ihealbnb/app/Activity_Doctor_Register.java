@@ -677,6 +677,10 @@ public class Activity_Doctor_Register extends FragmentActivity {
 				Toast.makeText(this,"Please add your qualification", Toast.LENGTH_SHORT).show();
 				return;
 			}
+			if(obj.RegistrationNo.trim().isEmpty()){
+				Toast.makeText(this,"Please add your Registeration Number.", Toast.LENGTH_SHORT).show();
+				return;
+			}
 			if(obj.stateId==-1){
 				Toast.makeText(this,"Please select a state", Toast.LENGTH_SHORT).show();
 				return;
@@ -723,6 +727,8 @@ public class Activity_Doctor_Register extends FragmentActivity {
 	
 	private void imageUpload(){
 		
+		Custom_ConnectionDetector cd = new Custom_ConnectionDetector(this);
+		if(cd.isConnectingToInternet()){
 		try {
 
 			final HashMap<String, File> imageMap = getMapImageParams();
@@ -769,6 +775,9 @@ public class Activity_Doctor_Register extends FragmentActivity {
 			Globals.showShortToast(this,
 					Globals.MSG_SERVER_ERROR);
 			ex.printStackTrace();
+		 }
+		}else{
+			Globals.showAlert("Error", Globals.INTERNET_ERROR, this);
 		}
 		
 	}
