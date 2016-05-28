@@ -1,8 +1,6 @@
 package com.ihealbnb.app;
 
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Map;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -128,7 +126,7 @@ public class Custom_URLs_Params {
 		 //JSONObject objJson = new JSONObject();
 		 HashMap< String, String> mapMain = new HashMap<String, String>();
 		  // HashMap< String, String> map = new HashMap<String, String>();
-		 JSONObject map = new JSONObject();
+		  JSONObject map = new JSONObject();
 		   Object_AppConfig objConfig = new Object_AppConfig(con);
 		   try{
 				map.put("user_id",objConfig.getUserId()+"");

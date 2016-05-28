@@ -39,9 +39,11 @@ public class Globals {
 
 	public static final int VOLLEY_TIMEOUT_MILLISECS = 10000;
 
-	public static final String DEFAULT_APP_SERVER_PATH = "http://xbnews.in/dr/client_requests/";
+	public static final String DEFAULT_APP_SERVER_PATH = "http://ihealsgnr.in/client_requests/";
+	//newstest12.tk
 	//http://xbnews.in/dr/client_requests/
 	// http://xercesblue.in/dr/client_requests/city/getAllCities
+	//http://xbnews.in/dr/client_requests/
 	public static final String MSG_SERVER_ERROR = "Error occured on server. Please try again";
 
 	public static final String INTERNET_ERROR = "Please check your Internet connection";
