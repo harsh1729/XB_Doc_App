@@ -1,0 +1,130 @@
+-injars 'E:\vikas sharma project\XB_iHEAL_App1\app\build\intermediates\transforms\jarMerging\release\jars\1\1f\combined.jar'
+-outjars 'E:\vikas sharma project\XB_iHEAL_App1\app\build\intermediates\multi-dex\release\componentClasses.jar'
+
+-libraryjars 'C:\Users\xb_sushil\AppData\Local\Android\sdk\build-tools\23.0.1\lib\shrinkedAndroid.jar'
+
+-forceprocessing
+-dontoptimize
+-dontobfuscate
+-dontusemixedcaseclassnames
+-dontpreverify
+-dontnote **
+-dontwarn **
+-printconfiguration 'E:\vikas sharma project\XB_iHEAL_App1\app\build\intermediates\multi-dex\release\components.flags'
+
+
+-keep class com.ihealbnb.app.Custom_VolleyAppController {
+    <init>();
+    void attachBaseContext(android.content.Context);
+}
+
+-keep class com.ihealbnb.app.Activity_category {
+    <init>();
+}
+
+-keep class com.ihealbnb.app.Activity_chooseCity {
+    <init>();
+}
+
+-keep class com.ihealbnb.app.Activity_splash {
+    <init>();
+}
+
+-keep class com.ihealbnb.app.Activity_Home {
+    <init>();
+}
+
+-keep class com.ihealbnb.app.Activity_detailsProfile {
+    <init>();
+}
+
+-keep class com.ihealbnb.app.Activity_imageViewer {
+    <init>();
+}
+
+-keep class com.ihealbnb.app.Activity_aboutUs {
+    <init>();
+}
+
+-keep class com.ihealbnb.app.Activity_Share {
+    <init>();
+}
+
+-keep class com.ihealbnb.app.Activity_Maps {
+    <init>();
+}
+
+-keep class com.ihealbnb.app.Activity_Doctor_Register {
+    <init>();
+}
+
+-keep class com.ihealbnb.app.Activity_LoginDoctor {
+    <init>();
+}
+
+-keep class com.ihealbnb.app.Activity_UserRegister {
+    <init>();
+}
+
+-keep class com.ihealbnb.app.Activity_Imageviewer_Help {
+    <init>();
+}
+
+-keep class com.ihealbnb.app.Activity_privacy_policy {
+    <init>();
+}
+
+-keep class com.google.android.gms.ads.AdActivity {
+    <init>();
+}
+
+-keep class com.google.android.gms.ads.purchase.InAppPurchaseActivity {
+    <init>();
+}
+
+-keep class com.google.android.gms.appinvite.PreviewActivity {
+    <init>();
+}
+
+-keep class com.google.android.gms.auth.api.signin.internal.SignInHubActivity {
+    <init>();
+}
+
+-keep class com.google.android.gms.auth.api.signin.RevocationBoundService {
+    <init>();
+}
+
+-keep class com.google.android.gms.measurement.AppMeasurementContentProvider {
+    <init>();
+}
+
+-keep class com.google.android.gms.measurement.AppMeasurementReceiver {
+    <init>();
+}
+
+-keep class com.google.android.gms.measurement.AppMeasurementService {
+    <init>();
+}
+
+-keep public class * extends android.app.Instrumentation {
+    <init>();
+}
+
+-keep public class * extends android.app.Application {
+    <init>();
+    void attachBaseContext(android.content.Context);
+}
+
+-keep public class * extends android.app.backup.BackupAgent {
+    <init>();
+}
+
+-keep public class * extends java.lang.annotation.Annotation {
+    <fields>;
+    <methods>;
+}
+
+-keep class com.android.tools.fd.** {
+    <fields>;
+    <methods>;
+}

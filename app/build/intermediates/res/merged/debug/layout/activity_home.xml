@@ -1,0 +1,64 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="${relativePackage}.${activityClass}" >
+
+    <!-- include header in Activity -->
+   <include layout="@layout/app_header" />
+
+<RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="8.8"
+         >
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="6dp"
+        >
+
+        <LinearLayout
+            android:id="@+id/scRollLinear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/custom_round_background"
+            android:orientation="vertical" >
+
+        </LinearLayout>
+    </ScrollView>
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/llytOptionsContainer"
+        android:orientation="horizontal"
+        android:onClick="toggleOptionsVisibility"
+        android:visibility="gone"  
+        android:baselineAligned="false"  
+        android:background="@color/app_tranparent_black"
+         >
+         <LinearLayout 
+                 android:layout_width="0dp"
+                 android:layout_weight="1"
+        		 android:layout_height="match_parent">
+        	</LinearLayout>  
+            
+             <ListView 
+                 android:layout_width="0dp"
+                 android:layout_weight="1"
+        		 android:layout_height="wrap_content"
+                 android:id="@+id/listViewOptions"
+                 android:dividerHeight="0dp"
+                 android:background="@color/app_white"
+                 android:visibility="gone"
+                 >
+                 
+             </ListView>
+             
+</LinearLayout>
+    </RelativeLayout>
+   
+</LinearLayout>

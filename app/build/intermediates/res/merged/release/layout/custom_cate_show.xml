@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" >
+
+    <ImageView
+        android:id="@+id/imgBtnCategory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:layout_centerInParent="true"
+        android:padding="0dp" />
+    
+    <LinearLayout
+        android:id="@+id/llytTextContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/tranparrent"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical" >
+        
+      <TextView
+        android:id="@+id/txtCatName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+        android:layout_marginBottom="4dp"
+        android:background="@drawable/bg_text_transgradient_light_to_dark"
+        android:textColor="@color/app_offwhite"
+        android:textSize="@dimen/txt_app_labels_large_fontsize"
+        android:textStyle="bold"
+        android:typeface="monospace" />
+        
+    </LinearLayout>
+
+    
+
+   <LinearLayout
+        android:id="@+id/linearTranspar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/tranparrent"
+        android:layout_centerInParent="true"
+        android:orientation="vertical" >
+    </LinearLayout>
+
+</RelativeLayout>
+
+
+<!--         android:layout_marginTop="8dp" -->
+<!--         android:layout_marginLeft="8dp" -->
+<!--         android:layout_marginRight="4dp" -->
+<!--         android:layout_marginBottom="4dp" -->

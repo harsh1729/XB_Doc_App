@@ -1,0 +1,562 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:padding="10dp">
+
+   <!-- <LinearLayout 
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_gravity="center">
+    
+    <TextView
+        android:id="@+id/item_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/txt_app_labels_normal"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+    
+    
+</LinearLayout> -->
+    
+    <ScrollView
+        android:id="@+id/scrollViewAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+          
+            
+          <LinearLayout 
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="horizontal"
+              >
+              
+            <LinearLayout 
+               android:layout_width="0dp"
+               android:layout_weight="1"
+               android:layout_height="1dp"
+              
+               android:background="@color/App_Header" 
+                ></LinearLayout>
+           <TextView 
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:textSize="@dimen/txt_app_labels_normal_large"
+               android:text="Resident Address"
+               android:layout_marginLeft="2dp"
+               android:layout_marginRight="2dp"/> 
+               
+               <LinearLayout 
+               android:layout_width="0dp"
+               android:layout_weight="1"
+               android:layout_height="1dp"
+               android:background="@color/App_Header" 
+                >
+                   
+                   
+               </LinearLayout>  
+              
+          </LinearLayout>
+       
+           <LinearLayout 
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+            
+                <TextView
+                    android:id="@+id/txtAddressResident1"
+                    android:layout_width="0dp"
+                    android:layout_weight="1.0"
+                    android:textSize="@dimen/txt_app_labels_normal"
+                    android:layout_height="wrap_content"
+                    android:text="Residential Line 1" />
+
+                <EditText
+                    android:id="@+id/edtResidentialAddress1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="@dimen/txt_app_labels_normal"
+                    android:maxLines="5"
+                    android:hint="House No."
+                    android:layout_weight="1.3"
+                    android:ems="10" >
+
+                    <requestFocus />
+                </EditText>
+                
+               </LinearLayout> 
+                <LinearLayout 
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+            
+                <TextView
+                    android:id="@+id/txtAddressResident2"
+                    android:layout_width="0dp"
+                    android:layout_weight="1.0"
+                    android:textSize="@dimen/txt_app_labels_normal"
+                    android:layout_height="wrap_content"
+                    android:text="Residential Line 2" />
+
+                <EditText
+                    android:id="@+id/edtResidentialAddress2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="@dimen/txt_app_labels_normal"
+                    android:maxLines="5"
+                    android:hint="Colony"
+                    android:layout_weight="1.3"
+                    android:ems="10" >
+
+                    <requestFocus />
+                </EditText>
+                
+               </LinearLayout> 
+           
+          <LinearLayout 
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="horizontal"
+              android:gravity="center">
+              
+            <LinearLayout 
+               android:layout_width="0dp"
+               android:layout_weight="1"
+               android:layout_height="1dp"
+              
+               android:background="@color/App_Header" 
+                ></LinearLayout>
+           <TextView 
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:textSize="@dimen/txt_app_labels_normal_large"
+               android:text="Clinic Address"
+               android:layout_marginLeft="2dp"
+               android:layout_marginRight="2dp"/> 
+               
+               <LinearLayout 
+               android:layout_width="0dp"
+               android:layout_weight="1"
+               android:layout_height="1dp"
+               android:background="@color/App_Header" 
+                >
+                   
+                   
+               </LinearLayout>  
+              
+          </LinearLayout> 
+           <LinearLayout 
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+            
+                <TextView
+                    android:id="@+id/txtAddressHos"
+                    android:layout_width="0dp"
+                    android:layout_weight="1.0"
+                    android:textSize="@dimen/txt_app_labels_normal"
+                    android:layout_height="wrap_content"
+                    android:text="Hospital Name" />
+
+                <EditText
+                    android:id="@+id/edtHospitalname"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="@dimen/txt_app_labels_normal"
+                    android:maxLines="2"
+                    android:hint="Hospital name"
+                    android:layout_weight="1.3"
+                    android:ems="10" >
+
+                    <requestFocus />
+                </EditText>
+                
+               </LinearLayout>
+               
+           
+           <LinearLayout 
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+            
+                <TextView
+                    android:id="@+id/txtAddressClinic1"
+                    android:layout_width="0dp"
+                    android:layout_weight="1.0"
+                    android:textSize="@dimen/txt_app_labels_normal"
+                    android:layout_height="wrap_content"
+                    android:text="Clinic Line 1" />
+
+                <EditText
+                    android:id="@+id/edtClinicAddress1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="@dimen/txt_app_labels_normal"
+                    android:maxLines="2"
+                    android:hint="House No."
+                    android:layout_weight="1.3"
+                    android:ems="10" >
+
+                    <requestFocus />
+                </EditText>
+                
+               </LinearLayout>
+               
+           <LinearLayout 
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+            
+                <TextView
+                    android:id="@+id/txtAddressClinic2"
+                    android:layout_width="0dp"
+                    android:layout_weight="1.0"
+                    android:textSize="@dimen/txt_app_labels_normal"
+                    android:layout_height="wrap_content"
+                    android:text="Clinic Line 2" />
+
+                <EditText
+                    android:id="@+id/edtClinicAddress2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="@dimen/txt_app_labels_normal"
+                    android:maxLines="2"
+                    android:hint="Colony"
+                    android:layout_weight="1.3"
+                    android:ems="10" >
+
+                    <requestFocus />
+                </EditText>
+                
+               </LinearLayout>
+            
+           <LinearLayout 
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txtstate"
+                    android:layout_width="0dp"
+                    android:layout_weight="1.0"
+                    android:textSize="@dimen/txt_app_labels_normal"
+                    android:layout_height="wrap_content"
+                    android:text="" />
+
+                <Spinner
+                    android:id="@+id/spinnerState"
+                    android:layout_width="0dp"
+                    android:spinnerMode="dropdown"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1.3" />
+                
+            </LinearLayout>
+            
+           <LinearLayout 
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txtCity"
+                    android:layout_width="0dp"
+                    android:layout_weight="1.0"
+                    android:textSize="@dimen/txt_app_labels_normal"
+                    android:layout_height="wrap_content"
+                    android:text="" />
+
+                <Spinner
+                    android:id="@+id/spinnerCity"
+                    android:layout_width="0dp"
+                    android:spinnerMode="dropdown"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1.3" />
+                
+            </LinearLayout>
+           
+           <LinearLayout 
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="horizontal"
+              android:layout_marginTop="5dp"
+              android:gravity="center">
+              
+            <LinearLayout 
+               android:layout_width="0dp"
+               android:layout_weight="1"
+               android:layout_height="1dp"
+              
+               android:background="@color/App_Header" 
+                ></LinearLayout>
+           <TextView 
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:textSize="@dimen/txt_app_labels_normal_large"
+               android:text="Appointment Contacts"
+               android:layout_marginLeft="2dp"
+               android:layout_marginRight="2dp"/> 
+               
+               <LinearLayout 
+               android:layout_width="0dp"
+               android:layout_weight="1"
+               android:layout_height="1dp"
+               android:background="@color/App_Header" 
+                >
+                   
+                   
+               </LinearLayout>  
+              
+          </LinearLayout>
+          
+           <LinearLayout 
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+            
+                <EditText
+                    android:id="@+id/edtAppoPerson1name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="@dimen/txt_app_labels_normal"
+                    android:maxLines="1"
+                    android:hint="person1 name"
+                    android:layout_weight="1.3"
+                    android:ems="10" >
+
+                    <requestFocus />
+                </EditText>
+
+                <EditText
+                    android:id="@+id/edtAppoPerson1number"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="@dimen/txt_app_labels_normal"
+                    android:maxLines="1"
+                    android:hint="person1 number"
+                    android:inputType="phone"
+                    android:layout_weight="1.3"
+                    android:ems="10" >
+
+                    <requestFocus />
+                </EditText>
+                
+               </LinearLayout>
+         <LinearLayout 
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+            
+                <EditText
+                    android:id="@+id/edtAppoPerson2name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="@dimen/txt_app_labels_normal"
+                    android:maxLines="1"
+                    android:hint="person2 name"
+                    android:layout_weight="1.3"
+                    android:ems="10" >
+
+                    <requestFocus />
+                </EditText>
+
+                <EditText
+                    android:id="@+id/edtAppoPerson2number"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="@dimen/txt_app_labels_normal"
+                    android:maxLines="1"
+                    android:hint="person2 number"
+                    android:inputType="phone"
+                    android:layout_weight="1.3"
+                    android:ems="10" >
+
+                    <requestFocus />
+                </EditText>
+                
+               </LinearLayout>
+           
+           <LinearLayout 
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+            
+                <EditText
+                    android:id="@+id/edtAppoPerson3name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="@dimen/txt_app_labels_normal"
+                    android:maxLines="1"
+                    android:hint="person3 name"
+                    android:layout_weight="1.3"
+                    android:ems="10" >
+
+                    <requestFocus />
+                </EditText>
+
+                <EditText
+                    android:id="@+id/edtAppoPerson3number"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="@dimen/txt_app_labels_normal"
+                    android:maxLines="1"
+                    android:hint="person3 number"
+                    android:inputType="phone"
+                    android:layout_weight="1.3"
+                    android:ems="10" >
+
+                    <requestFocus />
+                </EditText>
+                
+               </LinearLayout>
+           
+           
+           <LinearLayout 
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="horizontal"
+              android:layout_marginTop="5dp"
+              android:gravity="center">
+              
+            <LinearLayout 
+               android:layout_width="0dp"
+               android:layout_weight="1"
+               android:layout_height="1dp"
+              
+               android:background="@color/App_Header" 
+                ></LinearLayout>
+           <TextView 
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:textSize="@dimen/txt_app_labels_normal_large"
+               android:text="Hospital Facility"
+               android:layout_marginLeft="2dp"
+               android:layout_marginRight="2dp"/> 
+               
+               <LinearLayout 
+               android:layout_width="0dp"
+               android:layout_weight="1"
+               android:layout_height="1dp"
+               android:background="@color/App_Header" 
+                >
+                   
+                   
+               </LinearLayout>  
+              
+          </LinearLayout>
+           
+          <LinearLayout 
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+            
+                <TextView
+                    android:id="@+id/txtHospitalFacility"
+                    android:layout_width="0dp"
+                    android:layout_weight="1.0"
+                    android:textSize="@dimen/txt_app_labels_normal"
+                    android:layout_height="wrap_content"
+                    android:text="" />
+
+                <EditText
+                    android:id="@+id/edtHospitalFacility"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="@dimen/txt_app_labels_normal"
+                    android:maxLines="7"
+                    android:hint="Write hospital facility"
+                    android:layout_weight="1.3"
+                    android:ems="10" >
+
+                    <requestFocus />
+                </EditText>
+                
+               </LinearLayout> 
+           
+            <LinearLayout 
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+            
+                <TextView
+                    android:id="@+id/txtNearestMedical"
+                    android:layout_width="0dp"
+                    android:layout_weight="1.0"
+                    android:textSize="@dimen/txt_app_labels_normal"
+                    android:layout_height="wrap_content"
+                    android:text="Nearest Medical" />
+
+                <EditText
+                    android:id="@+id/edtNearestMedical"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="@dimen/txt_app_labels_normal"
+                    android:maxLines="2"
+                    android:hint="Nearest medical name "
+                    android:layout_weight="1.3"
+                    android:ems="10" >
+
+                    <requestFocus />
+                </EditText>
+                
+               </LinearLayout> 
+               
+            
+             <LinearLayout 
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+            
+                <TextView
+                    android:id="@+id/txtNearestMedicalContact"
+                    android:layout_width="0dp"
+                    android:layout_weight="1.0"
+                    android:textSize="@dimen/txt_app_labels_normal"
+                    android:layout_height="wrap_content"
+                    android:text="Medical Contact No." 
+                    android:paddingBottom="7dp"/>
+
+                <EditText
+                    android:id="@+id/edtNearestMedicalContact"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="@dimen/txt_app_labels_normal"
+                    android:maxLines="2"
+                    android:inputType="number"
+                    android:hint="Medical Contact No "
+                    android:layout_weight="1.3"
+                    android:ems="10" >
+
+                    <requestFocus />
+                </EditText>
+                
+               </LinearLayout> 
+           
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

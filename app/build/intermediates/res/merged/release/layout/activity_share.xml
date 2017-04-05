@@ -1,0 +1,29 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="${relativePackage}.${activityClass}" >
+    
+     <!-- Header aligned to top -->
+
+    <include layout="@layout/app_header" />
+    
+    <LinearLayout 
+        android:id="@+id/llytMainBodyDownload"
+        android:layout_width="match_parent"
+        android:layout_weight="9.0"
+        android:layout_height="0dp"
+        android:layout_margin="15dp"
+        android:padding="5dp"
+        android:orientation="vertical"
+        android:background="@drawable/card_background_selector">
+        
+        
+        
+        
+        
+    </LinearLayout>
+    
+    
+</LinearLayout>

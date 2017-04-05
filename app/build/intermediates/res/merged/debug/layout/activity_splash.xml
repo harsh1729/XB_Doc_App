@@ -1,0 +1,41 @@
+
+<RelativeLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_white"
+    android:orientation="vertical"
+    tools:context="${relativePackage}.${activityClass}" >
+
+    <ImageView
+        android:id="@+id/imgLogoName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="60dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/iheal_splash" />
+
+    <!-- <ProgressBar
+        android:id="@+id/spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imgLogoName"
+        android:layout_centerHorizontal="true"
+         android:layout_marginTop="40dp"
+        android:background="@color/app_transparent"
+        android:indeterminateDrawable="@drawable/progress_bar_radar"
+        android:minHeight="48dp" /> -->
+
+    <ImageView
+        android:id="@+id/imgLogoXB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="5dp"
+        android:src="@drawable/xb" />
+
+</RelativeLayout>

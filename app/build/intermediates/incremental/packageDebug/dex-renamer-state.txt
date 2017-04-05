@@ -1,0 +1,7 @@
+#Wed Apr 05 19:15:05 IST 2017
+base.0=E\:\\vikas sharma project\\XB_iHEAL_App1\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_8636a8f72c6b8a06532e24697659f0d868f299f5
+renamed.1=classes.dex
+renamed.0=classes2.dex
+file.1=E\:\\vikas sharma project\\XB_iHEAL_App1\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_06ef02f884aa2ac168f5fa989e7556bb9b94ce60\\classes.dex
+base.1=E\:\\vikas sharma project\\XB_iHEAL_App1\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_06ef02f884aa2ac168f5fa989e7556bb9b94ce60
+file.0=E\:\\vikas sharma project\\XB_iHEAL_App1\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_8636a8f72c6b8a06532e24697659f0d868f299f5\\classes.dex

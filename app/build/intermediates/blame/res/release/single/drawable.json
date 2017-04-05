@@ -1,0 +1,278 @@
+[
+    {
+        "merged": "E:\\vikas sharma project\\XB_iHEAL_App1\\app\\build\\intermediates\\res\\merged\\release\\drawable\\abc_item_background_holo_light.xml",
+        "source": "E:\\vikas sharma project\\XB_iHEAL_App1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.0\\res\\drawable\\abc_item_background_holo_light.xml"
+    },
+    {
+        "merged": "E:\\vikas sharma project\\XB_iHEAL_App1\\app\\build\\intermediates\\res\\merged\\release\\drawable\\card_state_pressed.xml",
+        "source": "E:\\vikas sharma project\\XB_iHEAL_App1\\app\\src\\main\\res\\drawable\\card_state_pressed.xml"
+    },
+    {
+        "merged": "E:\\vikas sharma project\\XB_iHEAL_App1\\app\\build\\intermediates\\res\\merged\\release\\drawable\\selector_text_app_header_to_app_details.xml",
+        "source": "E:\\vikas sharma project\\XB_iHEAL_App1\\app\\src\\main\\res\\drawable\\selector_text_app_header_to_app_details.xml"
+    },
+    {
+        "merged": "E:\\vikas sharma project\\XB_iHEAL_App1\\app\\build\\intermediates\\res\\merged\\release\\drawable\\borders.xml",
+        "source": "E:\\vikas sharma project\\XB_iHEAL_App1\\app\\src\\main\\res\\drawable\\borders.xml"
+    },
+    {
+        "merged": "E:\\vikas sharma project\\XB_iHEAL_App1\\app\\build\\intermediates\\res\\merged\\release\\drawable\\common_google_signin_btn_icon_dark.xml",
+        "source": "E:\\vikas sharma project\\XB_iHEAL_App1\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\drawable\\common_google_signin_btn_icon_dark.xml"
+    },
+    {
+        "merged": "E:\\vikas sharma project\\XB_iHEAL_App1\\app\\build\\intermediates\\res\\merged\\release\\drawable\\mr_ic_media_route_mono_light.xml",
+        "source": "E:\\vikas sharma project\\XB_iHEAL_App1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\23.0.0\\res\\drawable\\mr_ic_media_route_mono_light.xml"
+    },
+    {
+        "merged": "E:\\vikas sharma project\\XB_iHEAL_App1\\app\\build\\intermediates\\res\\merged\\release\\drawable\\mr_ic_media_route_connecting_mono_light.xml",
+        "source": "E:\\vikas sharma project\\XB_iHEAL_App1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\23.0.0\\res\\drawable\\mr_ic_media_route_connecting_mono_light.xml"
+    },
+    {
+        "merged": "E:\\vikas sharma project\\XB_iHEAL_App1\\app\\build\\intermediates\\res\\merged\\release\\drawable\\progress_bar_radar.xml",
+        "source": "E:\\vikas sharma project\\XB_iHEAL_App1\\app\\src\\main\\res\\drawable\\progress_bar_radar.xml"
+    },
+    {
+        "merged": "E:\\vikas sharma project\\XB_iHEAL_App1\\app\\build\\intermediates\\res\\merged\\release\\drawable\\card_background.xml",
+        "source": "E:\\vikas sharma project\\XB_iHEAL_App1\\app\\src\\main\\res\\drawable\\card_background.xml"
+    },
+    {
+        "merged": "E:\\vikas sharma project\\XB_iHEAL_App1\\app\\build\\intermediates\\res\\merged\\release\\drawable\\abc_cab_background_top_material.xml",
+        "source": "E:\\vikas sharma project\\XB_iHEAL_App1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.0\\res\\drawable\\abc_cab_background_top_material.xml"
+    },
+    {
+        "merged": "E:\\vikas sharma project\\XB_iHEAL_App1\\app\\build\\intermediates\\res\\merged\\release\\drawable\\bg_card_listview.xml",
+        "source": "E:\\vikas sharma project\\XB_iHEAL_App1\\app\\src\\main\\res\\drawable\\bg_card_listview.xml"
+    },
+    {
+        "merged": "E:\\vikas sharma project\\XB_iHEAL_App1\\app\\build\\intermediates\\res\\merged\\release\\drawable\\common_google_signin_btn_icon_light.xml",
+        "source": "E:\\vikas sharma project\\XB_iHEAL_App1\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\drawable\\common_google_signin_btn_icon_light.xml"
+    },
+    {
+        "merged": "E:\\vikas sharma project\\XB_iHEAL_App1\\app\\build\\intermediates\\res\\merged\\release\\drawable\\bg_aboutus.xml",
+        "source": "E:\\vikas sharma project\\XB_iHEAL_App1\\app\\src\\main\\res\\drawable\\bg_aboutus.xml"
+    },
+    {
+        "merged": "E:\\vikas sharma project\\XB_iHEAL_App1\\app\\build\\intermediates\\res\\merged\\release\\drawable\\abc_text_cursor_material.xml",
+        "source": "E:\\vikas sharma project\\XB_iHEAL_App1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.0\\res\\drawable\\abc_text_cursor_material.xml"
+    },
+    {
+        "merged": "E:\\vikas sharma project\\XB_iHEAL_App1\\app\\build\\intermediates\\res\\merged\\release\\drawable\\abc_dialog_material_background_light.xml",
+        "source": "E:\\vikas sharma project\\XB_iHEAL_App1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.0\\res\\drawable\\abc_dialog_material_background_light.xml"
+    },
+    {
+        "merged": "E:\\vikas sharma project\\XB_iHEAL_App1\\app\\build\\intermediates\\res\\merged\\release\\drawable\\abc_list_selector_holo_dark.xml",
+        "source": "E:\\vikas sharma project\\XB_iHEAL_App1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.0\\res\\drawable\\abc_list_selector_holo_dark.xml"
+    },
+    {
+        "merged": "E:\\vikas sharma project\\XB_iHEAL_App1\\app\\build\\intermediates\\res\\merged\\release\\drawable\\mr_ic_media_route_connecting_mono_dark.xml",
+        "source": "E:\\vikas sharma project\\XB_iHEAL_App1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\23.0.0\\res\\drawable\\mr_ic_media_route_connecting_mono_dark.xml"
+    },
+    {
+        "merged": "E:\\vikas sharma project\\XB_iHEAL_App1\\app\\build\\intermediates\\res\\merged\\release\\drawable\\abc_edit_text_material.xml",
+        "source": "E:\\vikas sharma project\\XB_iHEAL_App1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.0\\res\\drawable\\abc_edit_text_material.xml"
+    },
+    {
+        "merged": "E:\\vikas sharma project\\XB_iHEAL_App1\\app\\build\\intermediates\\res\\merged\\release\\drawable\\popup_view.xml",
+        "source": "E:\\vikas sharma project\\XB_iHEAL_App1\\app\\src\\main\\res\\drawable\\popup_view.xml"
+    },
+    {
+        "merged": "E:\\vikas sharma project\\XB_iHEAL_App1\\app\\build\\intermediates\\res\\merged\\release\\drawable\\abc_list_selector_background_transition_holo_light.xml",
+        "source": "E:\\vikas sharma project\\XB_iHEAL_App1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.0\\res\\drawable\\abc_list_selector_background_transition_holo_light.xml"
+    },
+    {
+        "merged": "E:\\vikas sharma project\\XB_iHEAL_App1\\app\\build\\intermediates\\res\\merged\\release\\drawable\\selector_text_black_to_appcolor.xml",
+        "source": "E:\\vikas sharma project\\XB_iHEAL_App1\\app\\src\\main\\res\\drawable\\selector_text_black_to_appcolor.xml"
+    },
+    {
+        "merged": "E:\\vikas sharma project\\XB_iHEAL_App1\\app\\build\\intermediates\\res\\merged\\release\\drawable\\gradient_selecter.xml",
+        "source": "E:\\vikas sharma project\\XB_iHEAL_App1\\app\\src\\main\\res\\drawable\\gradient_selecter.xml"
+    },
+    {
+        "merged": "E:\\vikas sharma project\\XB_iHEAL_App1\\app\\build\\intermediates\\res\\merged\\release\\drawable\\bg_text_transgradient_light_to_dark.xml",
+        "source": "E:\\vikas sharma project\\XB_iHEAL_App1\\app\\src\\main\\res\\drawable\\bg_text_transgradient_light_to_dark.xml"
+    },
+    {
+        "merged": "E:\\vikas sharma project\\XB_iHEAL_App1\\app\\build\\intermediates\\res\\merged\\release\\drawable\\abc_switch_thumb_material.xml",
+        "source": "E:\\vikas sharma project\\XB_iHEAL_App1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.0\\res\\drawable\\abc_switch_thumb_material.xml"
+    },
+    {
+        "merged": "E:\\vikas sharma project\\XB_iHEAL_App1\\app\\build\\intermediates\\res\\merged\\release\\drawable\\mr_ic_play_dark.xml",
+        "source": "E:\\vikas sharma project\\XB_iHEAL_App1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\23.0.0\\res\\drawable\\mr_ic_play_dark.xml"
+    },
+    {
+        "merged": "E:\\vikas sharma project\\XB_iHEAL_App1\\app\\build\\intermediates\\res\\merged\\release\\drawable\\mr_ic_media_route_mono_dark.xml",
+        "source": "E:\\vikas sharma project\\XB_iHEAL_App1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\23.0.0\\res\\drawable\\mr_ic_media_route_mono_dark.xml"
+    },
+    {
+        "merged": "E:\\vikas sharma project\\XB_iHEAL_App1\\app\\build\\intermediates\\res\\merged\\release\\drawable\\selector_bg_white_gradient.xml",
+        "source": "E:\\vikas sharma project\\XB_iHEAL_App1\\app\\src\\main\\res\\drawable\\selector_bg_white_gradient.xml"
+    },
+    {
+        "merged": "E:\\vikas sharma project\\XB_iHEAL_App1\\app\\build\\intermediates\\res\\merged\\release\\drawable\\common_plus_signin_btn_text_light.xml",
+        "source": "E:\\vikas sharma project\\XB_iHEAL_App1\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\drawable\\common_plus_signin_btn_text_light.xml"
+    },
+    {
+        "merged": "E:\\vikas sharma project\\XB_iHEAL_App1\\app\\build\\intermediates\\res\\merged\\release\\drawable\\abc_btn_radio_material.xml",
+        "source": "E:\\vikas sharma project\\XB_iHEAL_App1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.0\\res\\drawable\\abc_btn_radio_material.xml"
+    },
+    {
+        "merged": "E:\\vikas sharma project\\XB_iHEAL_App1\\app\\build\\intermediates\\res\\merged\\release\\drawable\\custom_round_background.xml",
+        "source": "E:\\vikas sharma project\\XB_iHEAL_App1\\app\\src\\main\\res\\drawable\\custom_round_background.xml"
+    },
+    {
+        "merged": "E:\\vikas sharma project\\XB_iHEAL_App1\\app\\build\\intermediates\\res\\merged\\release\\drawable\\card_background_selector.xml",
+        "source": "E:\\vikas sharma project\\XB_iHEAL_App1\\app\\src\\main\\res\\drawable\\card_background_selector.xml"
+    },
+    {
+        "merged": "E:\\vikas sharma project\\XB_iHEAL_App1\\app\\build\\intermediates\\res\\merged\\release\\drawable\\mr_ic_cast_dark.xml",
+        "source": "E:\\vikas sharma project\\XB_iHEAL_App1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\23.0.0\\res\\drawable\\mr_ic_cast_dark.xml"
+    },
+    {
+        "merged": "E:\\vikas sharma project\\XB_iHEAL_App1\\app\\build\\intermediates\\res\\merged\\release\\drawable\\selecter_registerdoctor_btn.xml",
+        "source": "E:\\vikas sharma project\\XB_iHEAL_App1\\app\\src\\main\\res\\drawable\\selecter_registerdoctor_btn.xml"
+    },
+    {
+        "merged": "E:\\vikas sharma project\\XB_iHEAL_App1\\app\\build\\intermediates\\res\\merged\\release\\drawable\\popup_selecter.xml",
+        "source": "E:\\vikas sharma project\\XB_iHEAL_App1\\app\\src\\main\\res\\drawable\\popup_selecter.xml"
+    },
+    {
+        "merged": "E:\\vikas sharma project\\XB_iHEAL_App1\\app\\build\\intermediates\\res\\merged\\release\\drawable\\abc_cab_background_internal_bg.xml",
+        "source": "E:\\vikas sharma project\\XB_iHEAL_App1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.0\\res\\drawable\\abc_cab_background_internal_bg.xml"
+    },
+    {
+        "merged": "E:\\vikas sharma project\\XB_iHEAL_App1\\app\\build\\intermediates\\res\\merged\\release\\drawable\\mr_ic_pause_dark.xml",
+        "source": "E:\\vikas sharma project\\XB_iHEAL_App1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\23.0.0\\res\\drawable\\mr_ic_pause_dark.xml"
+    },
+    {
+        "merged": "E:\\vikas sharma project\\XB_iHEAL_App1\\app\\build\\intermediates\\res\\merged\\release\\drawable\\bg_edit.xml",
+        "source": "E:\\vikas sharma project\\XB_iHEAL_App1\\app\\src\\main\\res\\drawable\\bg_edit.xml"
+    },
+    {
+        "merged": "E:\\vikas sharma project\\XB_iHEAL_App1\\app\\build\\intermediates\\res\\merged\\release\\drawable\\abc_tab_indicator_material.xml",
+        "source": "E:\\vikas sharma project\\XB_iHEAL_App1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.0\\res\\drawable\\abc_tab_indicator_material.xml"
+    },
+    {
+        "merged": "E:\\vikas sharma project\\XB_iHEAL_App1\\app\\build\\intermediates\\res\\merged\\release\\drawable\\abc_btn_colored_material.xml",
+        "source": "E:\\vikas sharma project\\XB_iHEAL_App1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.0\\res\\drawable\\abc_btn_colored_material.xml"
+    },
+    {
+        "merged": "E:\\vikas sharma project\\XB_iHEAL_App1\\app\\build\\intermediates\\res\\merged\\release\\drawable\\common_plus_signin_btn_icon_dark.xml",
+        "source": "E:\\vikas sharma project\\XB_iHEAL_App1\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\drawable\\common_plus_signin_btn_icon_dark.xml"
+    },
+    {
+        "merged": "E:\\vikas sharma project\\XB_iHEAL_App1\\app\\build\\intermediates\\res\\merged\\release\\drawable\\mr_ic_play_light.xml",
+        "source": "E:\\vikas sharma project\\XB_iHEAL_App1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\23.0.0\\res\\drawable\\mr_ic_play_light.xml"
+    },
+    {
+        "merged": "E:\\vikas sharma project\\XB_iHEAL_App1\\app\\build\\intermediates\\res\\merged\\release\\drawable\\abc_textfield_search_material.xml",
+        "source": "E:\\vikas sharma project\\XB_iHEAL_App1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.0\\res\\drawable\\abc_textfield_search_material.xml"
+    },
+    {
+        "merged": "E:\\vikas sharma project\\XB_iHEAL_App1\\app\\build\\intermediates\\res\\merged\\release\\drawable\\selector_row_item_listview.xml",
+        "source": "E:\\vikas sharma project\\XB_iHEAL_App1\\app\\src\\main\\res\\drawable\\selector_row_item_listview.xml"
+    },
+    {
+        "merged": "E:\\vikas sharma project\\XB_iHEAL_App1\\app\\build\\intermediates\\res\\merged\\release\\drawable\\tranparrent.xml",
+        "source": "E:\\vikas sharma project\\XB_iHEAL_App1\\app\\src\\main\\res\\drawable\\tranparrent.xml"
+    },
+    {
+        "merged": "E:\\vikas sharma project\\XB_iHEAL_App1\\app\\build\\intermediates\\res\\merged\\release\\drawable\\selector_text_black_to_white.xml",
+        "source": "E:\\vikas sharma project\\XB_iHEAL_App1\\app\\src\\main\\res\\drawable\\selector_text_black_to_white.xml"
+    },
+    {
+        "merged": "E:\\vikas sharma project\\XB_iHEAL_App1\\app\\build\\intermediates\\res\\merged\\release\\drawable\\selector_text_blue_to_white.xml",
+        "source": "E:\\vikas sharma project\\XB_iHEAL_App1\\app\\src\\main\\res\\drawable\\selector_text_blue_to_white.xml"
+    },
+    {
+        "merged": "E:\\vikas sharma project\\XB_iHEAL_App1\\app\\build\\intermediates\\res\\merged\\release\\drawable\\abc_dialog_material_background_dark.xml",
+        "source": "E:\\vikas sharma project\\XB_iHEAL_App1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.0\\res\\drawable\\abc_dialog_material_background_dark.xml"
+    },
+    {
+        "merged": "E:\\vikas sharma project\\XB_iHEAL_App1\\app\\build\\intermediates\\res\\merged\\release\\drawable\\bg_white_gradient.xml",
+        "source": "E:\\vikas sharma project\\XB_iHEAL_App1\\app\\src\\main\\res\\drawable\\bg_white_gradient.xml"
+    },
+    {
+        "merged": "E:\\vikas sharma project\\XB_iHEAL_App1\\app\\build\\intermediates\\res\\merged\\release\\drawable\\abc_btn_check_material.xml",
+        "source": "E:\\vikas sharma project\\XB_iHEAL_App1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.0\\res\\drawable\\abc_btn_check_material.xml"
+    },
+    {
+        "merged": "E:\\vikas sharma project\\XB_iHEAL_App1\\app\\build\\intermediates\\res\\merged\\release\\drawable\\abc_ratingbar_full_material.xml",
+        "source": "E:\\vikas sharma project\\XB_iHEAL_App1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.0\\res\\drawable\\abc_ratingbar_full_material.xml"
+    },
+    {
+        "merged": "E:\\vikas sharma project\\XB_iHEAL_App1\\app\\build\\intermediates\\res\\merged\\release\\drawable\\custom_btn_beige.xml",
+        "source": "E:\\vikas sharma project\\XB_iHEAL_App1\\app\\src\\main\\res\\drawable\\custom_btn_beige.xml"
+    },
+    {
+        "merged": "E:\\vikas sharma project\\XB_iHEAL_App1\\app\\build\\intermediates\\res\\merged\\release\\drawable\\selecter_details_call_btn.xml",
+        "source": "E:\\vikas sharma project\\XB_iHEAL_App1\\app\\src\\main\\res\\drawable\\selecter_details_call_btn.xml"
+    },
+    {
+        "merged": "E:\\vikas sharma project\\XB_iHEAL_App1\\app\\build\\intermediates\\res\\merged\\release\\drawable\\abc_btn_borderless_material.xml",
+        "source": "E:\\vikas sharma project\\XB_iHEAL_App1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.0\\res\\drawable\\abc_btn_borderless_material.xml"
+    },
+    {
+        "merged": "E:\\vikas sharma project\\XB_iHEAL_App1\\app\\build\\intermediates\\res\\merged\\release\\drawable\\cast_ic_notification_connecting.xml",
+        "source": "E:\\vikas sharma project\\XB_iHEAL_App1\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast\\8.4.0\\res\\drawable\\cast_ic_notification_connecting.xml"
+    },
+    {
+        "merged": "E:\\vikas sharma project\\XB_iHEAL_App1\\app\\build\\intermediates\\res\\merged\\release\\drawable\\abc_list_selector_background_transition_holo_dark.xml",
+        "source": "E:\\vikas sharma project\\XB_iHEAL_App1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.0\\res\\drawable\\abc_list_selector_background_transition_holo_dark.xml"
+    },
+    {
+        "merged": "E:\\vikas sharma project\\XB_iHEAL_App1\\app\\build\\intermediates\\res\\merged\\release\\drawable\\abc_btn_default_mtrl_shape.xml",
+        "source": "E:\\vikas sharma project\\XB_iHEAL_App1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.0\\res\\drawable\\abc_btn_default_mtrl_shape.xml"
+    },
+    {
+        "merged": "E:\\vikas sharma project\\XB_iHEAL_App1\\app\\build\\intermediates\\res\\merged\\release\\drawable\\mr_ic_settings_light.xml",
+        "source": "E:\\vikas sharma project\\XB_iHEAL_App1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\23.0.0\\res\\drawable\\mr_ic_settings_light.xml"
+    },
+    {
+        "merged": "E:\\vikas sharma project\\XB_iHEAL_App1\\app\\build\\intermediates\\res\\merged\\release\\drawable\\common_google_signin_btn_text_light.xml",
+        "source": "E:\\vikas sharma project\\XB_iHEAL_App1\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\drawable\\common_google_signin_btn_text_light.xml"
+    },
+    {
+        "merged": "E:\\vikas sharma project\\XB_iHEAL_App1\\app\\build\\intermediates\\res\\merged\\release\\drawable\\abc_list_selector_holo_light.xml",
+        "source": "E:\\vikas sharma project\\XB_iHEAL_App1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.0\\res\\drawable\\abc_list_selector_holo_light.xml"
+    },
+    {
+        "merged": "E:\\vikas sharma project\\XB_iHEAL_App1\\app\\build\\intermediates\\res\\merged\\release\\drawable\\mr_ic_settings_dark.xml",
+        "source": "E:\\vikas sharma project\\XB_iHEAL_App1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\23.0.0\\res\\drawable\\mr_ic_settings_dark.xml"
+    },
+    {
+        "merged": "E:\\vikas sharma project\\XB_iHEAL_App1\\app\\build\\intermediates\\res\\merged\\release\\drawable\\abc_spinner_textfield_background_material.xml",
+        "source": "E:\\vikas sharma project\\XB_iHEAL_App1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.0\\res\\drawable\\abc_spinner_textfield_background_material.xml"
+    },
+    {
+        "merged": "E:\\vikas sharma project\\XB_iHEAL_App1\\app\\build\\intermediates\\res\\merged\\release\\drawable\\common_plus_signin_btn_text_dark.xml",
+        "source": "E:\\vikas sharma project\\XB_iHEAL_App1\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\drawable\\common_plus_signin_btn_text_dark.xml"
+    },
+    {
+        "merged": "E:\\vikas sharma project\\XB_iHEAL_App1\\app\\build\\intermediates\\res\\merged\\release\\drawable\\back.xml",
+        "source": "E:\\vikas sharma project\\XB_iHEAL_App1\\app\\src\\main\\res\\drawable\\back.xml"
+    },
+    {
+        "merged": "E:\\vikas sharma project\\XB_iHEAL_App1\\app\\build\\intermediates\\res\\merged\\release\\drawable\\abc_item_background_holo_dark.xml",
+        "source": "E:\\vikas sharma project\\XB_iHEAL_App1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.0\\res\\drawable\\abc_item_background_holo_dark.xml"
+    },
+    {
+        "merged": "E:\\vikas sharma project\\XB_iHEAL_App1\\app\\build\\intermediates\\res\\merged\\release\\drawable\\common_plus_signin_btn_icon_light.xml",
+        "source": "E:\\vikas sharma project\\XB_iHEAL_App1\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\drawable\\common_plus_signin_btn_icon_light.xml"
+    },
+    {
+        "merged": "E:\\vikas sharma project\\XB_iHEAL_App1\\app\\build\\intermediates\\res\\merged\\release\\drawable\\common_google_signin_btn_text_dark.xml",
+        "source": "E:\\vikas sharma project\\XB_iHEAL_App1\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\drawable\\common_google_signin_btn_text_dark.xml"
+    },
+    {
+        "merged": "E:\\vikas sharma project\\XB_iHEAL_App1\\app\\build\\intermediates\\res\\merged\\release\\drawable\\custom_round_textview.xml",
+        "source": "E:\\vikas sharma project\\XB_iHEAL_App1\\app\\src\\main\\res\\drawable\\custom_round_textview.xml"
+    },
+    {
+        "merged": "E:\\vikas sharma project\\XB_iHEAL_App1\\app\\build\\intermediates\\res\\merged\\release\\drawable\\mr_ic_pause_light.xml",
+        "source": "E:\\vikas sharma project\\XB_iHEAL_App1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\23.0.0\\res\\drawable\\mr_ic_pause_light.xml"
+    },
+    {
+        "merged": "E:\\vikas sharma project\\XB_iHEAL_App1\\app\\build\\intermediates\\res\\merged\\release\\drawable\\mr_ic_cast_light.xml",
+        "source": "E:\\vikas sharma project\\XB_iHEAL_App1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\23.0.0\\res\\drawable\\mr_ic_cast_light.xml"
+    }
+]

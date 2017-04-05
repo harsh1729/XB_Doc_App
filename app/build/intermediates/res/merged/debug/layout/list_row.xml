@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/selector_row_item_listview"
+        android:descendantFocusability="afterDescendants"
+        android:orientation="horizontal"
+        android:padding="10dp" >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingRight="10dp" >
+
+            <TextView
+                android:id="@+id/txtName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text=""
+                android:textColor="@drawable/selector_text_black_to_white"
+                android:textSize="@dimen/txt_app_labels_normal"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtQualification"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:text=""
+                android:textColor="@color/app_text"
+                android:textSize="@dimen/txt_app_labels_normal" />
+
+            <TextView
+                android:id="@+id/txtHospital"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:text=""
+                android:textColor="@color/app_text"
+                android:textSize="@dimen/txt_app_labels_normal"
+                android:visibility="gone" />
+
+            <!--
+              <TextView 
+		       android:id="@+id/txtAddress"
+		      android:layout_width="wrap_content"
+		      android:layout_height="wrap_content"
+		      android:textSize="@dimen/txt_app_labels_normal"
+		      android:maxLines="2"
+			  android:ellipsize="end"
+		      android:text=""
+		      android:textColor="@color/app_text"
+		      />
+            -->
+            <LinearLayout 
+                android:layout_width="match_parent"
+                android:layout_height="0dp" 
+                android:layout_weight="1.0"
+                android:orientation="vertical">
+                
+            </LinearLayout>
+            
+
+            <TextView
+                android:id="@+id/btnCall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/custom_btn_beige"
+                android:gravity="bottom"
+                android:paddingBottom="7dp"
+                android:paddingLeft="14dp"
+                android:paddingRight="14dp"
+                android:paddingTop="7dp"
+                android:text="CALL"
+                android:textColor="@color/app_white"
+                android:textSize="@dimen/txt_app_labels_normal"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/imgDoctor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:padding="0dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/default_user" />
+
+            <TextView
+                android:id="@+id/txtFee"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="bottom"
+                android:text=""
+                android:textColor="@drawable/selector_text_black_to_white"
+                android:textSize="@dimen/txt_app_labels_normal"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout><!--
+     android:layout_height="0dp"
+		      android:layout_weight="0.9"
+		      android:layout_marginTop="10dp"
+-->
